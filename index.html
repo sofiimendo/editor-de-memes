@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,18 +35,21 @@
         <div id="editorContent" class="editor-content">
             <p id="topText" class="top-text"></p>
             <div id="imageMeme" class="image-meme">
-    
+
             </div>
             <p id="bottonText" class="botton-text"></p>
         </div>
     </main>
-<!-- ASIDE imagen --><!-- ASIDE imagen -->
-<!-- ASIDE imagen --><!-- ASIDE imagen -->
-<!-- ASIDE imagen --><!-- ASIDE imagen -->   
+    <!-- ASIDE imagen -->
+    <!-- ASIDE imagen -->
+    <!-- ASIDE imagen -->
+    <!-- ASIDE imagen -->
+    <!-- ASIDE imagen -->
+    <!-- ASIDE imagen -->
     <section>
         <aside class="aside">
-                <!-- ASIDE de IMAGEN -->
-                <!-- HAY QUE PONERLE UN EVENT PARA QUE CAMBIE AL ASIDE DE TEXTO-->
+            <!-- ASIDE de IMAGEN -->
+            <!-- HAY QUE PONERLE UN EVENT PARA QUE CAMBIE AL ASIDE DE TEXTO-->
             <h2 class="img-aside">IMAGEN</h2>
             <h3>URL</h3>
             <div>
@@ -59,8 +63,8 @@
                 <div>
                     <input class="input-fondo-color" type="text" id="idFondo" placeholder="Ingresar scrol fondos">
                 </div>
-                
-                
+
+
             </div>
             <h3>FILTROS</h3>
             <div class="filtros">
@@ -74,64 +78,92 @@
             </div>
         </aside>
     </section>
-    
-<!-- ASIDE txt --><!-- ASIDE txt --><!-- ASIDE txt -->
-<!-- ASIDE txt --><!-- ASIDE txt --><!-- ASIDE txt -->
-<!-- ASIDE txt --><!-- ASIDE txt --><!-- ASIDE txt -->
-<section>
-    <aside class="aside-txt">
+
+    <!-- ASIDE txt -->
+    <!-- ASIDE txt -->
+    <!-- ASIDE txt -->
+    <!-- ASIDE txt -->
+    <!-- ASIDE txt -->
+    <!-- ASIDE txt -->
+    <!-- ASIDE txt -->
+    <!-- ASIDE txt -->
+    <!-- ASIDE txt -->
+    <section>
+        <aside class="aside-txt">
             <!-- HAY QUE PONERLE UN EVENT PARA QUE CAMBIE AL ASIDE DE TEXTO-->
-        <h2 class="txt-aside">TEXTO</h2>
+            <h2 class="txt-aside">TEXTO</h2>
         <h3>SUPERIOR</h3>
-        <div>
-            <input class="input-url" type="text" id="idUrl" placeholder="TOP TEXT">
-            <p>() Sin texto superior</p>
-        </div>
-        <h3>INFERIOR</h3>
-        <div>
-            <input class="input-fondo-color" type="text" id="idFondo" placeholder="BOTTOM TEXT">
-            <p>() Sin texto superior</p>
-        </div>
-        <div>
-            <h3>FUENTE</h3>
-            <select name="" id="">
-                aca va el selecn que yo puse un imput
-            </select>
-            <input class="las-fuentes" type="text" id="lasFuentesUrl" placeholder="aca van alas fuentes">
-            <div class="size-align-font-txt">
+            <div>
+                <input class="input-url" type="text" id="idUrl" placeholder="TOP TEXT">
                 <div>
-                    <input class="fuentes-size" type="text" id="fuentesSizeUrl" placeholder="aca van los tamaños">
+                    <input id="idSinTextoSuperior" type="checkbox" value="check" />
+                    <label for="textoSuperior">Sin texto superior</label>
                 </div>
-                <div class="align-btns">
-                    <button class="btn-txt-align-icon"><i class="fas fa-align-left"></i></button>
-                    <button class="btn-txt-align-icon"><i class="fas fa-align-center"></i></button>
-                    <button class="btn-txt-align-icon"><i class="fas fa-align-right"></i></button>
+            </div>
+        <h3>INFERIOR</h3>
+            <div>
+                <input class="input-fondo-color" type="text" id="idFondo" placeholder="BOTTOM TEXT">
+                <div>
+                    <input id="idSinTextoInferior" type="checkbox" value="check" />
+                    <label for="textoInferior">Sin texto inferior</label>
                 </div>
             </div>
             <div>
-                <div class="color-fondo">
+                <h3>FUENTE</h3>
+                <select name="" id="">
+                    aca va el selecn que yo puse un imput
+                </select>
+                <input class="las-fuentes" type="text" id="lasFuentesUrl" placeholder="aca van alas fuentes">
+                <div class="size-align-font-txt">
                     <div>
-                        <h3>color</h3>
                         <input class="fuentes-size" type="text" id="fuentesSizeUrl" placeholder="aca van los tamaños">
                     </div>
-                    <div>
-                        <h3>fondo</h3>
-                        <input class="fuentes-size" type="text" id="fuentesSizeUrl" placeholder="aca van los tamaños">
+                    <div class="align-btns">
+                        <button class="btn-txt-align-icon"><i class="fas fa-align-left"></i></button>
+                        <button class="btn-txt-align-icon"><i class="fas fa-align-center"></i></button>
+                        <button class="btn-txt-align-icon"><i class="fas fa-align-right"></i></button>
                     </div>
                 </div>
                 <div>
-                    <p>() Fondo Transparente</p>
+                    <div class="color-fondo">
+                        <div>
+                            <h3>color</h3>
+                            <input class="fuentes-size" type="text" id="fuentesSizeUrl"
+                                placeholder="aca van los tamaños">
+                        </div>
+                        <div>
+                            <h3>fondo</h3>
+                            <input class="fuentes-size" type="text" id="fuentesSizeUrl"
+                                placeholder="aca van los tamaños">
+                        </div>
+                    </div>
+
+                    <div>
+                        <input id="idFondoTransparente" type="checkbox" value="check" />
+                        <label for="fondoTransparente">Fondo Transparente</label>
+                    </div>
+                </div>
+                <div>
+                    <h3>CONTORNO</h3>
+                    <div class="btns-contorno">
+                        <button>Ninguno</button>
+                        <button>Claro</button>
+                        <button>Oscuro</button>
+                    </div>
+                </div>
+                <div>
+                    <h3>ESPACIADO</h3>
+                    <input class="fuentes-size" type="text" id="fuentesSizeUrl" placeholder="aca vaNUMEROS">
+                </div>
+                <div>
+                    <h3>INTERLINEADO</h3>
+                    <input class="fuentes-size" type="text" id="fuentesSizeUrl" placeholder="aca va UN SCROLL">
                 </div>
             </div>
-            
-        </div>
-    </aside>
-</section>
-
-    <footer class="footer">
-        Hecho por tete y sofi beibeeee
-    </footer>
+        </aside>
+    </section>
 
     <link rel="stylesheet" href="script.js">
 </body>
+
 </html>
