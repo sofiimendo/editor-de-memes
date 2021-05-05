@@ -18,19 +18,30 @@
 
 <body>
     <header class="head">
-        <h1 class="title">GENERADOR de MEMES</h1>
-        <div class="head-buttons">
-            <!-- LOS BOTONES ESTAN AHI Y CON EL HOVER SE VEN...TENGO QUE SACARLES EL BORDE A LOS BOTONES-->
-            <button class="buttons"> <i class="icon-size far fa-file-image"></i>Imagen
+        <h1 class="app-name">GENERADOR de MEMES</h1>
+        <div class="btns-container">
+<!---------------BUTTONS----------------------------->
+<!---------------BUTTONS----------------------------->
+<!---------------BUTTONS----------------------------->
+<!--a los botones de texto e imagen les puse dos clases.
+pero a ls botones de dark appearance y light appearance
+les di tambien las clases btn-appearance btn-dark-appearance
+y btn-appearance btn-light-appearance para cuando 
+tengamos que hacer el tema oscuro y claro -->
+            <button class="buttons btn" id="btn-img"> <i class="icon-size far fa-file-image"></i>Imagen
             </button>
-            <button class="buttons"><i class="icon-size fas fa-font"></i>Texto</i>
+            <button class="buttons btn" id="btn-txt"><i class="icon-size fas fa-font"></i>Texto</i>
             </button>
-            <button class="buttons"><i class="icon-size fas fa-lightbulb"><i class="far fa-lightbulb"></i></i>Modo
+            <button class="buttons btn btn-appearance btn-dark-appearance" id="button-dark-appearance"><i class="icon-size fas fa-lightbulb"></i></i>Modo
                 Oscuro</i>
             </button>
+<!-- este boton va oculto por eso esta comentado--><!-- 
+           <button class="buttons btn btn-appearance btn-light-appearance" id="button-light-appearance"><i class="far fa-lightbulb"></i></i>Modo
+                Claro</i>
+            </button>
+-->
         </div>
     </header>
-    <!-- EN EL MAIN VA LA IMAGEN QUE PEGARIAMOS CON EL URL NO TINENE CLASES NI NADA SOLO COPIE Y PEGUE -->
     <main>
         <div id="editorContent" class="editor-content">
             <p id="topText" class="top-text"></p>
@@ -51,10 +62,14 @@
             <!-- ASIDE de IMAGEN -->
             <!-- HAY QUE PONERLE UN EVENT PARA QUE CAMBIE AL ASIDE DE TEXTO-->
             <h2 class="img-aside">IMAGEN</h2>
+<!---------------------- url  ------------------->
+<!---------------------- url  ------------------->
             <h3>URL</h3>
             <div>
                 <input class="input-url" type="text" id="idUrl" placeholder="Ingresar URL">
             </div>
+<!---------------------- ASIDE fondo  ---------->
+<!---------------------- ASIDE fondo  ---------->
             <h3>FONDO</h3>
             <div class="img-fondo-color">
                 <div>
@@ -63,8 +78,8 @@
                 <div>
                     <input class="input-fondo-color" type="text" id="idFondo" placeholder="Ingresar scrol fondos">
                 </div>
-
-
+<!---------------------- ASIDE filtros  ---------->
+<!---------------------- ASIDE filtros  ---------->
             </div>
             <h3>FILTROS</h3>
             <div class="filtros">
@@ -76,25 +91,27 @@
                 <label for="">HUE</label>
                 <label for="">SATURADO</label>
             </div>
+            <button class="btn">Reestablecer filtros</button>
         </aside>
     </section>
 
-    <!-- ASIDE txt -->
-    <!-- ASIDE txt -->
-    <!-- ASIDE txt -->
-    <!-- ASIDE txt -->
-    <!-- ASIDE txt -->
-    <!-- ASIDE txt -->
-    <!-- ASIDE txt -->
-    <!-- ASIDE txt -->
-    <!-- ASIDE txt -->
-    <section>
+    <!-- ASIDE txt --><!-- ASIDE txt --><!-- ASIDE txt -->
+    <!-- ASIDE txt --><!-- ASIDE txt --><!-- ASIDE txt -->
+    <!-- ASIDE txt --><!-- ASIDE txt --><!-- ASIDE txt -->
+    <!-- ASIDE txt --><!-- ASIDE txt --><!-- ASIDE txt -->
+    
+    <section class="panel-aside" id="panel-aside">
         <aside class="aside-txt">
             <!-- HAY QUE PONERLE UN EVENT PARA QUE CAMBIE AL ASIDE DE TEXTO-->
             <h2 class="txt-aside">TEXTO</h2>
         <h3>SUPERIOR</h3>
             <div>
-                <input class="input-url" type="text" id="idUrl" placeholder="TOP TEXT">
+                <label for="idTxtSup"></label>
+                <textarea id="idTxtSup" 
+                    cols="20" 
+                    rows="1" 
+                    maxlength="1000">
+                </textarea>
                 <div>
                     <input id="idSinTextoSuperior" type="checkbox" value="check" />
                     <label for="textoSuperior">Sin texto superior</label>
@@ -102,7 +119,12 @@
             </div>
         <h3>INFERIOR</h3>
             <div>
-                <input class="input-fondo-color" type="text" id="idFondo" placeholder="BOTTOM TEXT">
+                <label for="idTxtInf"></label>
+                <textarea id="idTxtInf" 
+                    cols="20" 
+                    rows="1" 
+                     maxlength="1000">
+                </textarea>
                 <div>
                     <input id="idSinTextoInferior" type="checkbox" value="check" />
                     <label for="textoInferior">Sin texto inferior</label>
@@ -157,7 +179,16 @@
                 </div>
                 <div>
                     <h3>INTERLINEADO</h3>
-                    <input class="fuentes-size" type="text" id="fuentesSizeUrl" placeholder="aca va UN SCROLL">
+                    <label for="idInterlineado"></label>
+                    <select id="idInterlineado">
+                        <option value="0.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2">1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                    </select>
+
                 </div>
             </div>
         </aside>
