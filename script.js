@@ -1,2 +1,8 @@
-me traigo el 
-id imageMeme y con un innerHtml uso la url que me ponen en el input textarea
+
+const escribir = document.getElementById("idTxtSup");
+const topText = document.getElementById("topText")
+const cambiarTexto = ()=>{
+    topText.innerText=escribir.value;
+};
+
+escribir.addEventListener("input",cambiarTexto)

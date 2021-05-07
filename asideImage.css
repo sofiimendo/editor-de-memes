@@ -1,0 +1,23 @@
+.img-aside {
+    right: 0;
+}
+.div-fondo-color {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: wheat;
+}    
+}
+.inputs-fondo {
+    background-color: rgb(164, 236, 197);
+    display: flex;
+    justify-content: space-between;
+}
+.filtros {
+    background-color: rgb(14, 108, 124);
+    display: flex;
+    flex-direction: column;
+}
+.btn {
+    border: white solid 1px;
+    padding: 1%;
+}

@@ -3,64 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*-------HEADER----------*/
-/*-------HEADER----------*/
-/*-------HEADER----------*/
-.head {
-    color: rgb(255, 255, 255);
-    background-color: rgb(67, 124, 121);
-    width: 100%;
-    text-align: center;
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 25px;
-}
-.app-name {
-    background-color: rgb(0, 0, 0);
-    padding: 1%;
-}
-
-.btns-container {
-    background-color: rgb(255, 0, 170);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 1%;
-}
-/*------BUTTONS-------*/
-/*------BUTTONS-------*/
-/*------BUTTONS-------*/
-
-.buttons {
-    background-color: teal;
-    margin-right: 2%;
-}
-.buttons:hover {
-    border: rgb(239, 255, 10) 1px solid;
-    border-radius: 5px;
-}
-.btn {
-    border: white solid 1px;
-    padding: 1%;
-}
-.btn-appearance {
-
-}
-.btn-dark-appearance {
-
-}
-.btn-light-appearance {
-    
-}
-.icon-size {
-    background-color: rgb(25, 143, 70);
-    font-size: 20px;
-    margin-right: 5px;
-}
-/*------------ASIDE imagen---------*/
-/*------------ASIDE imagen---------*/
-/*------------ASIDE imagen---------*/
 .aside {
-    background-color: yellow;
+    background-color: rgb(194, 194, 194);
     width: 260px;
     height: 100%;
     display: flex;
@@ -74,89 +18,23 @@
     padding-top: 3%;
     font-family: monospace;
 }
+.panel-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 1%
+}
 .panel-aside {
-    background-color: crimson;
+    font-size: 13px;
 }
-.img-aside {
-    background-color: rgb(201, 21, 21);
-    top: 0;
+.panels {
+    margin-bottom: 7%;
 }
-.img-fondo-color {
-    background-color: rgb(99, 26, 99);
-    display: flex;
-    flex-wrap: wrap;
+/*LA CLASE panel-aside LA USE PERO NO LA ESTILER PORQUE CREO QUE SLO LA USARE PARA HACER EL LIGHT/DARK APPEARANCE*/
+.input {
+    border: 1px solid white;
+    border-radius: 2px;
+    margin-bottom: 0.2px;
 }
-.inputs-fondo {
-    background-color: rgb(23, 25, 139);
-    display: flex;
-    justify-content: space-between;
-}
-.filtros {
-    background-color: rgb(14, 108, 124);
-    display: flex;
-    flex-direction: column;
-}
-.btn {
-    border: white solid 1px;
-    padding: 1%;
-}
-
-/*------------ASIDE txt---------*/
-/*------------ASIDE txt---------*/
-/*------------ASIDE txt---------*/
-.aside-txt {
-    background-color: rgb(0, 255, 34);
-    width: 260px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    top: 0;
-    position: fixed;
-    z-index: 10;
-    padding: 2%;
-    padding-top: 3%;
-    font-family: monospace;
-}
-.btn-txt-align-icon {
-    background-color: rgb(235, 39, 104);
-    padding: 1%;
-}
-.size-align-font-txt {
-    background-color: rgb(224, 212, 33);
-    display: flex;
-    align-items: center;
-}
-.align-btns {
-    background-color: rgb(106, 82, 196);
-    display: flex;
-    align-content: space-between;
-}
-.color-fondo {
-    background-color: rgb(255, 0, 85);
-    margin: 1%;
-    padding: 2%;
-    display: flex;
-    flex-wrap: wrap;
-}
-.btns-contorno {
-    background-color: rgb(255, 238, 0);
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-
-/* exportado*/
-.editorContent {
-    background-color: rgb(88, 83, 13);
-    height: 450px;
-    width: 450px;
-    border: 2px solid black;
-    margin: 20px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.div-title {
+    margin-bottom: 1%;
 }

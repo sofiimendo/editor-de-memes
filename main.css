@@ -1,0 +1,34 @@
+/* exportado*/
+.my-main {
+    /*flex grow es porque depende del tamaño de la imagen que se le ponga es cuano debe crecer?
+    mi DUDA es por el numero 1 que le asigne*/
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-background);
+    padding: 0.5%;
+}
+.editor-content {
+    background-color: rgb(255, 255, 255);
+    height: 450px;
+    width: 450px;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-bottom-text {
+    height: 15%;
+    width: 100%;
+    font-family: Impact;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}

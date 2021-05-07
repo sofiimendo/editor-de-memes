@@ -1,0 +1,51 @@
+.head {
+    width: 100%;
+    text-align: center;
+}
+.app-name {
+    padding: 1%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+/*------BUTTONS-------*/
+/*------BUTTONS-------*/
+/*------BUTTONS-------*/
+.btns-container {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.2%;
+}
+.buttons {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2%;
+    font-size: 14px;
+}
+.buttons:hover {
+    border: rgb(239, 255, 10) 1px solid;
+    border-radius: 5px;
+}
+.btn {
+    border: white solid 1px;
+    border-radius: 5px;
+}
+.icon-size {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    margin-right: 5px;
+}
+.btn-appearance {
+
+}
+.btn-dark-appearance {
+
+}
+.btn-light-appearance {
+    
+}
