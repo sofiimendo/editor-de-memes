@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .aside {
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(75, 75, 75);
     width: 260px;
     height: 100%;
     display: flex;
@@ -17,6 +17,7 @@
     padding: 2%;
     padding-top: 3%;
     font-family: monospace;
+    color:rgb(255,255,255)
 }
 .panel-title {
     font-size: 20px;

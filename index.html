@@ -22,7 +22,7 @@
 
 <body>
     <header class="head">
-        <h1 class="app-name">GENERADOR de MEMES</h1>
+        <h1  class="app-name" id="app-name">GENERADOR de MEMES</h1>
         <!---------------BUTTONS----------------------------->
         <!---------------BUTTONS----------------------------->
         <!---------------BUTTONS----------------------------->
@@ -31,24 +31,21 @@ pero a ls botones de dark appearance y light appearance
 les di tambien las clases btn-appearance btn-dark-appearance
 y btn-appearance btn-light-appearance para cuando 
 tengamos que hacer el tema oscuro y claro -->
-        <div class="btns-container">
-            <button class="buttons btn" id="btn-img"> <i class="icon-size far fa-file-image"></i>Imagen
-            </button>
-            <button class="buttons btn" id="btn-txt"><i class="icon-size fas fa-font"></i>Texto</i>
-            </button>
-            <button class="buttons btn btn-appearance btn-dark-appearance" id="button-dark-appearance"><i
-                    class="icon-size fas fa-lightbulb"></i></i>Modo
-                Oscuro</i>
-            </button>
+        <div class="btns-container" id="btns-container">
+            <button class="buttons btn" id="btn-img"> <i class="icon-size far fa-file-image"></i>Imagen</button>
+            <button class="buttons btn" id="btn-txt"><i class="icon-size fas fa-font"></i> Texto</button>
+            <button class="buttons btn btn-appearance btn-dark-appearance" id="button-dark-appearance"> 
+              <i class="icon-size fas fa-lightbulb"></i> Modo Oscuro
+            </button> 
             <!-- este boton va oculto por eso esta comentado-->
-            <!-- 
-           <button class="buttons btn btn-appearance btn-light-appearance" id="button-light-appearance"><i class="far fa-lightbulb"></i></i>Modo
-                Claro</i>
+            
+           <button class="buttons btn btn-appearance btn-light-appearance" id="button-light-appearance"><i class="far fa-lightbulb"></i> <span>Modo c</span>
+                Claro 
             </button>
--->
+
         </div>
     </header>
-    <div class="my-main">
+    <div class="my-main"id="my-main">
         <main>
             <div class="editor-content" id="editorContent">
                 <p id="topText" class="top-bottom-text">TOP TEXT</p>
@@ -194,7 +191,8 @@ tengamos que hacer el tema oscuro y claro -->
 
 
 
-    <link rel="stylesheet" href="script.js">
+    <script src="script.js"></script>
+
 </body>
 
 </html>
