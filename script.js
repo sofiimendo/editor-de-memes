@@ -14,9 +14,9 @@ const body = document.querySelector('body');
 btnDark.addEventListener('click', () => {
   body.classList.toggle("dark");
   body.classList.toggle("light");
-  if(body.classList.contains("dark")){
+  if (body.classList.contains("dark")) {
     textTheme.innerText = "Modo Claro"
-  }else{
+  } else {
     textTheme.innerText = "Modo Oscuro"
   }
 })
@@ -27,7 +27,7 @@ btnDark.addEventListener('click', () => {
 // PARA QUE APAREZCA Y DESAPAREZCA EL ASIDE DE TEXTO
 panelAsideTexto = document.getElementById('panel-aside-txt')
 panelAsideTexto.style = 'display: none'
-btnTxt.addEventListener('click',() => {
+btnTxt.addEventListener('click', () => {
   panelAsideTexto.style = 'display: inline'
   panelAsideImg.style = 'display: none'
 })
@@ -35,7 +35,7 @@ btnTxt.addEventListener('click',() => {
 // PARA QUE APAREZCA  EL ASIDE DE IMAGEN
 
 panelAsideImg.style = 'display: inline'
-btnImg.addEventListener('click',() => {
+btnImg.addEventListener('click', () => {
   panelAsideImg.style = 'display: inline'
   panelAsideTexto.style = 'display: none'
 })
@@ -44,18 +44,18 @@ btnImg.addEventListener('click',() => {
 // CAMBIA TEXTO SUPERIOR
 const escribirSup = document.getElementById("idTxtSup");
 const topText = document.getElementById("topText")
-const cambiarTextoSuperior = ()=>{
+const cambiarTextoSuperior = () => {
   topText.innerHTML = escribirSup.value;
 };
-escribirSup.addEventListener("input",cambiarTextoSuperior)
+escribirSup.addEventListener("input", cambiarTextoSuperior)
 
 // CAMBIA TEXTO INFERIOR
 const escribirInf = document.getElementById('idTxtInf')
 const bottwwwomText = document.getElementById('bottomText')
-const cambiarTextoInferior = ()=>{
+const cambiarTextoInferior = () => {
   bottomText.innerHTML = escribirInf.value;
 };
-  escribirInf.addEventListener("input",cambiarTextoInferior)
+escribirInf.addEventListener("input", cambiarTextoInferior)
 
 
 const cambiarTexto = () => {
@@ -67,18 +67,25 @@ escribirInf.addEventListener("input", cambiarTexto)
 
 //Traer imagen
 const urlImg = document.getElementById('imgUrl');
-urlImg.addEventListener('change',() => {
+urlImg.addEventListener('change', () => {
   imgMeme.style.backgroundImage = `url('${urlImg.value}')`;
 })
+//imgMeme.style.backgroundImage = `url('https://i.pinimg.com/originals/08/99/ea/0899eafb344f09b3656c18938718e1ff.jpg')`;
 
+//Background colorFondo:
+const backgroundImgColor = document.getElementById('colorFondo');
+const colorHex = document.getElementById('backgroundColorImg');
+backgroundImgColor.addEventListener('change', () => {
+  imgMeme.style.backgroundColor = `${backgroundImgColor.value}`
+  colorHex.innerText = backgroundImgColor.value.toUpperCase();
+})
 
-imgMeme.style.backgroundImage = `url('https://i.pinimg.com/originals/08/99/ea/0899eafb344f09b3656c18938718e1ff.jpg')`;
-
-//Background filter:
+//Background imgBackgorundFilter:
 const backgroundFilter = document.getElementById('imgBackgroundFilter');
 backgroundFilter.addEventListener('change', () => {
   imgMeme.style.backgroundBlendMode = backgroundFilter.value
 })
+
 
 //Inputs filtros Imagenes:
 const brillo = document.getElementById('brightness');
@@ -105,5 +112,5 @@ const valores = () => {
   imgMeme.style.filter = `brightness(${brilloValue}) opacity(${opacidadValue}) contrast(${contrasteValue}%) blur(${desenfoqueValue}px) grayscale(${escalaGrisesValue}%) sepia(${sepiaValue}%) hue-rotate(${hueValue}deg) saturate(${saturadoValue}%) invert(${negativoValue})`;
 }
 for (let i = 0; i < filtros.length; i++) {
-  filtros[i].addEventListener('input',valores);
+  filtros[i].addEventListener('input', valores);
 }
