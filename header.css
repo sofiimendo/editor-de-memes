@@ -2,22 +2,25 @@
     width: 100%;
     text-align: center;
 }
+
 .app-name {
     padding: 1%;
-    background-color: rgb(50, 50, 50);
+    background-color: var(--color-header);
     color: rgb(255, 255, 255);
     font-size: 30px;
 }
+
 /*------BUTTONS-------*/
 /*------BUTTONS-------*/
 /*------BUTTONS-------*/
 .btns-container {
-    background-color: rgb(50, 50, 50);
+    background-color: var(--color-header);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 0.2%;
 }
+
 .buttons {
     background-color: rgb(50, 50, 50);
     color: rgb(255, 255, 255);
@@ -27,25 +30,27 @@
     margin: 0.2%;
     font-size: 14px;
 }
+
 .buttons:hover {
     border: rgb(239, 255, 10) 1px solid;
     border-radius: 5px;
 }
+
 .btn {
     border: white solid 1px;
     border-radius: 5px;
 }
+
 .icon-size {
     color: rgb(255, 255, 255);
     font-size: 14px;
     margin-right: 5px;
 }
-.btn-appearance {
 
-}
 .btn-dark-appearance {
-display:inline
+    display: inline
 }
+
 .btn-light-appearance {
-  display:none    
+    display: none
 }

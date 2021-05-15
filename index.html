@@ -20,9 +20,9 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="dark">
     <header class="head">
-        <h1  class="app-name" id="app-name">GENERADOR de MEMES</h1>
+        <h1 class="app-name" id="app-name">GENERADOR de MEMES</h1>
         <!---------------BUTTONS----------------------------->
         <!---------------BUTTONS----------------------------->
         <!---------------BUTTONS----------------------------->
@@ -34,22 +34,18 @@ tengamos que hacer el tema oscuro y claro -->
         <div class="btns-container" id="btns-container">
             <button class="buttons btn" id="btn-img"> <i class="icon-size far fa-file-image"></i>Imagen</button>
             <button class="buttons btn" id="btn-txt"><i class="icon-size fas fa-font"></i> Texto</button>
-            <button class="buttons btn btn-appearance btn-dark-appearance" id="button-dark-appearance"> 
-              <i class="icon-size fas fa-lightbulb"></i> Modo Oscuro
-            </button> 
-            <!-- este boton va oculto por eso esta comentado-->
+            <button class="buttons btn btn-appearance btn-dark-appearance" id="button-dark-appearance">
             
-           <button class="buttons btn btn-appearance btn-light-appearance" id="button-light-appearance"><i class="far fa-lightbulb"></i> <span>Modo c</span>
-                Claro 
+                <i class="icon-size fas fa-lightbulb"></i><span id="text-theme"> Modo Claro</span>
             </button>
-
+            <!-- este boton va oculto por eso esta comentado-->
         </div>
     </header>
-    <div class="my-main"id="my-main">
+    <div class="my-main" id="my-main">
         <main>
             <div class="editor-content" id="editorContent">
                 <p id="topText" class="top-bottom-text">TOP TEXT</p>
-                <div id="imageMeme" class="image-meme">
+                <div id="imgMeme" class="img-meme">
                 </div>
                 <p id="bottomText" class="top-bottom-text">BOTTOM TEXT</p>
             </div>
@@ -63,7 +59,7 @@ tengamos que hacer el tema oscuro y claro -->
                 <!-------- url  ----------->
                 <div class="panels">
                     <h3 class="div-title">URL</h3>
-                    <input class="input input-url" type="text" id="idUrl" placeholder="Ingresar URL">
+                    <input class="input input-url" type="text" id="imgUrl" placeholder="Ingresar URL">
                 </div>
                 <!---- ASIDE fondo  ---------->
                 <!---- ASIDE fondo  ---------->
@@ -71,11 +67,18 @@ tengamos que hacer el tema oscuro y claro -->
                     <h3 class="div-title">FONDO</h3>
                     <div class="div-fondo-color">
                         <div>
-                            <input class="input input-fondo-color" type="text" id="idFondo" placeholder="Ingresar Color">
+                            <input class="input input-fondo-color" type="color" id="colorFondo"
+                                placeholder="Ingresar Color">
                         </div>
                         <div>
-                            <input class="input input-fondo-color" type="text" id="idFondo"
-                                placeholder="Ingresar scrol fondos">
+                            <select name="" id="imgBackgroundFilter">
+                                <option value="unset">Ninguno</option>
+                                <option value="lighten">Aclarar</option>
+                                <option value="darken">Oscurecer</option>
+                                <option value="difference">Diferencia</option>
+                                <option value="luminosity">Luminosidad</option>
+                                <option value="multiply">Multiplcar</option>
+                            </select>
                         </div>
                     </div>
                     <!------- ASIDE filtros  ---------->
@@ -84,13 +87,33 @@ tengamos que hacer el tema oscuro y claro -->
 
                 <div class="panels filtros">
                     <h3 class="div-title">FILTROS</h3>
+                    <label for="">BRILLO</label>
+                    <input type="range" id="brightness" class="filter" data-property="brightness" min="0" max="1"
+                        step="0.1" value="1">
                     <label for="">OPACIDAD</label>
+                    <input type="range" id="opacity" class="filter" data-property="opacity" min="0" max="1"
+                        step="0.1" value="1">
                     <label for="">CONTRASTE</label>
+                    <input type="range" id="contrast" class="filter" data-property="contrasts" min="100"
+                        max="1000" step="1" value="100">
                     <label for="">DESENFOQUE</label>
+                    <input type="range" id="blur" class="filter" data-property="blur" min="0" max="10" step="0.1"
+                        value="0">
                     <label for="">ESCALA DE GRISES</label>
+                    <input type="range" id="grayScale" class="filter" data-property="grayScale min=" 0" max="100"
+                        step="1" value="0">
                     <label for="">SEPIA</label>
+                    <input type="range" id="sepia" class="filter" data-property="sepia" min="0" max="100" step="1"
+                        value="0">
                     <label for="">HUE</label>
+                    <input type="range" id="hueRotation" class="filter" data-property="hue" min="0" max="359"
+                        step="1" value="0">
                     <label for="">SATURADO</label>
+                    <input type="range" id="saturate" class="filter" data-property="saturation" min="100"
+                        max="1000" step="10" value="100">
+                    <label for="">NEGATIVO</label>
+                    <input type="range" id="invert" class="filter" data-property="negative" min="0" max="1"
+                        step="0.1" value="0">
                 </div>
                 <button class="btn">Reestablecer filtros</button>
             </aside>
