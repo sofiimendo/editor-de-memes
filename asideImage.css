@@ -5,7 +5,10 @@
     display: flex;
     flex-wrap: wrap;
 }    
-
+.img-meme{
+    height: 550px;
+    width: 550px;
+}
 .inputs-fondo {
     background-color: rgb(164, 236, 197);
     display: flex;
