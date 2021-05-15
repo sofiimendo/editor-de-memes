@@ -44,7 +44,7 @@ btnLight.addEventListener('click', () => {
 })
 
 // PARA QUE APAREZCA Y DESAPAREZCA EL ASIDE DE TEXTO
-panelAsideTexto = document.getElementById('panel-aside-txt')
+const panelAsideTexto = document.getElementById('panel-aside-txt')
 panelAsideTexto.style = 'display: none'
 btnTxt.addEventListener('click',() => {
   panelAsideTexto.style = 'display: inline'
@@ -52,14 +52,12 @@ btnTxt.addEventListener('click',() => {
 })
 
 // PARA QUE APAREZCA  EL ASIDE DE IMAGEN
-panelAsideImg = document.getElementById('panel-aside-img')
+
 panelAsideImg.style = 'display: inline'
 btnImg.addEventListener('click',() => {
   panelAsideImg.style = 'display: inline'
   panelAsideTexto.style = 'display: none'
 })
-
-
 
 // CAMBIA TEXTO SUPERIOR
 const escribirSup = document.getElementById("idTxtSup");
@@ -71,12 +69,66 @@ escribirSup.addEventListener("input",cambiarTextoSuperior)
 
 // CAMBIA TEXTO INFERIOR
 const escribirInf = document.getElementById('idTxtInf')
-const bottwwwomText = document.getElementById('bottomText')
+const bottomText = document.getElementById('bottomText')
 const cambiarTextoInferior = ()=>{
   bottomText.innerHTML = escribirInf.value;
 };
   escribirInf.addEventListener("input",cambiarTextoInferior)
 
+
+//SACA TEXTO SUPERIOR
+const esconderTextoSuperior = document.getElementById('idSinTextoSuperior')
+const esconderTextoInferior = document.getElementById('idSinTextoInferior')
+const sacaTextoSup =(event) =>{
+  if (event.target === esconderTextoSuperior){
+    topText.classList.toggle('esconderTexto')
+  }
+  else if (event.target === esconderTextoInferior){
+    bottomText.classList.toggle('esconderTexto')
+  }
+  }
+  esconderTextoSuperior.addEventListener('click',sacaTextoSup)
+  esconderTextoInferior.addEventListener('click',sacaTextoSup)
+
+//  CAMBIAR TAMAÑO DE LETRA 
+const cambiarTamanoletra = document.getElementById('fuentesSizeUrl')
+const cambiarTamano =() => {
+  topText.style.fontSize = cambiarTamanoletra.value + 'px';
+  bottomText.style.fontSize = cambiarTamanoletra.value + 'px';
+}
+cambiarTamanoletra.addEventListener('change',cambiarTamano)
+
+// CAMBIAR FUENTE
+const cambiarTipoDeFuente = document.getElementById('letras')
+const cambiarTipoDeLetra = () => {
+  topText.style.fontFamily = cambiarTipoDeFuente.value
+  bottomText.style.fontFamily = cambiarTipoDeFuente.value
+}
+cambiarTipoDeFuente.addEventListener('change',cambiarTipoDeLetra)
+
+//ALINEACION IZQUIERDA
+const cambiarAlineacionIzquierda = document.getElementById('alineacion-izq')
+const cambiarAlinIzq = () => {
+ topText.style.justifyContent = 'flex-start' 
+ bottomText.style.justifyContent = 'flex-start'
+}
+cambiarAlineacionIzquierda.addEventListener('click',cambiarAlinIzq)
+
+//ALINEACION CENTRO
+const cambiarAlineacionCentro = document.getElementById('alineacion-centro')
+const cambiarAlinCentro = () => {
+ topText.style.justifyContent = 'center' 
+ bottomText.style.justifyContent = 'center'
+}
+cambiarAlineacionCentro.addEventListener('click',cambiarAlinCentro)
+
+//ALINEACION DERECHA
+const cambiarAlineacionDerecha = document.getElementById('alineacion-der')
+const cambiarAlinDer = () => {
+ topText.style.justifyContent = 'flex-end' 
+ bottomText.style.justifyContent = 'flex-end'
+}
+cambiarAlineacionDerecha.addEventListener('click',cambiarAlinDer)
 
 
 
