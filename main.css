@@ -7,22 +7,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(70,70,70);
-    /* padding: 0.5%; */
-    height: 100%;
- }
+    padding: 0.5%;
+}
+
 .editor-content {
     background-color: rgb(0,0,0);
     height: 600px;
     width: 600px;
-    /* border: 2px solid rgb(0,0,0); */
-    margin-bottom: 115px;
+    border: 2px solid rgb(0,0,0);
+    margin: 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
 }
+
 .top-bottom-text {
     height: 15%;
     width: 100%;
@@ -35,4 +34,4 @@
     background-color: rgb(255,255,255);
     padding-left: 10px;
     padding-right: 10px;
-    }
+}
