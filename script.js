@@ -33,7 +33,7 @@ btnTxt.addEventListener('click',() => {
 })
 
 // PARA QUE APAREZCA  EL ASIDE DE IMAGEN
-panelAsideImg = document.getElementById('panel-aside-img')
+
 panelAsideImg.style = 'display: inline'
 btnImg.addEventListener('click',() => {
   panelAsideImg.style = 'display: inline'
