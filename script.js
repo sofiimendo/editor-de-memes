@@ -86,7 +86,6 @@ backgroundFilter.addEventListener('change', () => {
   imgMeme.style.backgroundBlendMode = backgroundFilter.value
 })
 
-
 //Inputs filtros Imagenes:
 const brillo = document.getElementById('brightness');
 const opacidad = document.getElementById('opacity');
