@@ -113,3 +113,18 @@ const valores = () => {
 for (let i = 0; i < filtros.length; i++) {
   filtros[i].addEventListener('input', valores);
 }
+
+//Boton resetear filtros
+const resetFilter = document.getElementById('btnReset');
+resetFilter.addEventListener('click', () => {
+  brillo.value = 1;
+  opacidad.value = 1;
+  contraste.value = 100;
+  desenfoque.value = 0;
+  escalaGrises.value = 0;
+  sepia.value = 0;
+  hue.value = 0;
+  saturado.value = 100;
+  negativo.value = 0;
+  valores();
+})
