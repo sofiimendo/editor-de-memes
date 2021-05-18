@@ -21,8 +21,6 @@ btnDark.addEventListener('click', () => {
   }
 })
 
-// cambiar texto (probemos desp de hacerlas x separado)
-
 
 // PARA QUE APAREZCA Y DESAPAREZCA EL ASIDE DE TEXTO
 panelAsideTexto = document.getElementById('panel-aside-txt')
@@ -39,7 +37,6 @@ btnImg.addEventListener('click', () => {
   panelAsideImg.style = 'display: inline'
   panelAsideTexto.style = 'display: none'
 })
-
 
 // CAMBIA TEXTO SUPERIOR
 const escribirSup = document.getElementById("idTxtSup");
@@ -70,7 +67,6 @@ const urlImg = document.getElementById('imgUrl');
 urlImg.addEventListener('change', () => {
   imgMeme.style.backgroundImage = `url('${urlImg.value}')`;
 })
-//imgMeme.style.backgroundImage = `url('https://i.pinimg.com/originals/08/99/ea/0899eafb344f09b3656c18938718e1ff.jpg')`;
 
 //Background colorFondo:
 const backgroundImgColor = document.getElementById('colorFondo');
