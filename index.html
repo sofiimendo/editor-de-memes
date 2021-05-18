@@ -130,7 +130,7 @@ tengamos que hacer el tema oscuro y claro -->
                     <textarea id="idTxtSup" cols="22" rows="1" maxlength="100">
                 </textarea>
                     <div>
-                        <input id="idSinTextoSuperior" type="checkbox" value="check" />
+                        <input id="idSinTextoSuperior"  type="checkbox" value="check" />
                         <label for="textoSuperior">Sin texto superior</label>
                     </div>
                 </div>
@@ -140,25 +140,34 @@ tengamos que hacer el tema oscuro y claro -->
                     <textarea id="idTxtInf" cols="22" rows="1" maxlength="1000">
                 </textarea>
                     <div>
-                        <input id="idSinTextoInferior" type="checkbox" value="check" />
+                        <input id="idSinTextoInferior"  type="checkbox" value="check" />
                         <label for="textoInferior">Sin texto inferior</label>
                     </div>
                 </div>
                 <div class="panels">
                     <div class="panels">
                         <h3 class="div-title">FUENTE</h3>
-                        <select name="" id="">
+                        <select name="" id="letras">
+                          <option value="Arial">Arial</option>
+                          <option value="Arial Black">Arial Black</option>
+                          <option value="American Typewriter">American Typewriter</option>
+                          <option value="Andale Mono">Andale Mono</option>
+                          <option selected value="Comic Sans MS">Comic Sans MS</option>
+                          <option value="Helvetica">Helvetica</option>
+                          <option value="Impact">Impact</option>
+                          <option value="Verdana">Verdana</option>
+                          <option value="Times New Roman">Times New Roman</option>          
                         </select>
-                        <input class="las-fuentes" type="text" id="lasFuentesUrl" placeholder="aca van alas fuentes">
+                        <!-- <input class="las-fuentes" type="text" id="lasFuentesUrl" placeholder="aca van alas fuentes"> -->
                         <div class="size-align-font-txt">
                             <div>
-                                <input class="input fuentes-size" type="text" id="fuentesSizeUrl"
-                                    placeholder="aca van los tamaños">
+                                <input class="input fuentes-size" type="number" id="fuentesSizeUrl" min='10' max='50' value= '40'
+                                >                                                                   
                             </div>
                             <div class="align-btns">
-                                <button class="btn-txt-align-icon"><i class="fas fa-align-left"></i></button>
-                                <button class="btn-txt-align-icon"><i class="fas fa-align-center"></i></button>
-                                <button class="btn-txt-align-icon"><i class="fas fa-align-right"></i></button>
+                                <button class="btn-txt-align-icon"><i class="fas fa-align-left" id="alineacion-izq"></i></button>
+                                <button class="btn-txt-align-icon"><i class="fas fa-align-center" id="alineacion-centro"></i></button>
+                                <button class="btn-txt-align-icon"><i class="fas fa-align-right" id="alineacion-der"></i></button>
                             </div>
                         </div>
                     </div>
