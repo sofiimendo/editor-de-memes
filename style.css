@@ -5,7 +5,7 @@
 }
 
 body.dark{
-    --color-aside: rgb(75,75,75);
+    --color-aside: #4a4a4a;
     --color-header: rgb(50,50,50);
     --color-background: rgb(70,70,70);
     --color: rgb(255,255,255);
