@@ -136,6 +136,17 @@ backgroundFilter.addEventListener('change', () => {
   imgMeme.style.backgroundBlendMode = backgroundFilter.value
 })
 
+//Boton descarga de imagen
+const contenedorMeme = document.getElementById('editorContent')
+const botonDescarga = document.getElementById('btnDownload');
+botonDescarga.addEventListener('click', () =>{
+  domtoimage.toBlob(contenedorMeme)
+  .then(function (blob) {
+      window.saveAs(blob, 'meme.png');
+  });
+
+})
+
 //Inputs filtros Imagenes:
 const brillo = document.getElementById('brightness');
 const opacidad = document.getElementById('opacity');
