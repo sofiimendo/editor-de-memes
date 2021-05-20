@@ -116,6 +116,77 @@ const cambiarTexto = () => {
 escribirSup.addEventListener("input", cambiarTexto)
 escribirInf.addEventListener("input", cambiarTexto)
 
+
+//cambiar color texto
+
+const cambiarColorTexto = document.getElementById('color-fuente')
+const cambiarColorText = () => {
+  topText.style.color = cambiarColorTexto.value
+  bottomText.style.color = cambiarColorTexto.value
+}
+cambiarColorTexto.addEventListener('change',cambiarColorText)
+
+//cambiar fondo texto
+
+const cambiarColorFondo = document.getElementById('fondo-fuente')
+const cambiarFondoText = () => {
+  topText.style.background = cambiarColorFondo.value
+  bottomText.style.background = cambiarColorFondo.value
+}
+cambiarColorFondo.addEventListener('change',cambiarFondoText)
+
+//fondo transparente
+const transparentCheckBox = document.getElementById('idFondoTransparente')
+const ponerFondoTransparente = () => {
+ topText.classList.toggle('fondoTransparenteTop');
+ bottomText.classList.toggle('fondoTransparenteBottom')
+}
+
+transparentCheckBox.addEventListener('click',ponerFondoTransparente)
+
+//CONTORNO
+
+const btnNoneContorno = document.getElementById('btnNoneContorno')
+const btnDarkContorno = document.getElementById('btnDarkContorno')
+const btnLightContorno = document.getElementById('btnLightContorno')
+
+const cambiarContorno = (event) => {
+  if (event.target ===  btnNoneContorno){
+    topText.classList.remove('light-stroke', 'dark-stroke');
+    bottomText.classList.remove('light-stroke','dark-stroke');
+  } 
+  else if (event.target === btnDarkContorno){
+    topText.classList.remove('light-stroke','stroke-none');
+    bottomText.classList.remove('light-stroke','stroke-none');
+    topText.classList.add('dark-stroke');
+    bottomText.classList.add('dark-stroke');
+  }
+
+  else if (event.target === btnLightContorno){
+    topText.classList.remove('dark-stroke','stroke-none');
+    bottomText.classList.remove('dark-stroke','stroke-none');
+    topText.classList.add('light-stroke');
+    bottomText.classList.add('light-stroke');
+}
+}
+btnNoneContorno.addEventListener('click',cambiarContorno);
+btnDarkContorno.addEventListener('click',cambiarContorno);
+btnLightContorno.addEventListener('click',cambiarContorno);
+
+
+//espaciado
+// const cambiarColorFondo = document.getElementById('fondo-fuente')
+// const cambiarFondoText = () => {
+//   topText.style.background = cambiarColorFondo.value
+//   bottomText.style.background = cambiarColorFondo.value
+// }
+// cambiarColorFondo.addEventListener('change',cambiarFondoText)
+
+//interlineado 
+//linehight
+
+
+
 //Traer imagen
 const urlImg = document.getElementById('imgUrl');
 urlImg.addEventListener('change', () => {

@@ -6,8 +6,14 @@
     flex-wrap: wrap;
 }    
 .img-meme{
-    height: 550px;
-    width: 550px;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+
+
 }
 .inputs-fondo {
     background-color: rgb(164, 236, 197);
