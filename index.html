@@ -53,9 +53,9 @@ tengamos que hacer el tema oscuro y claro -->
     <div class="my-main" id="my-main">
         <main>
             <div class="editor-content" id="editorContent">
-                <p id="topText" class="top-bottom-text">TOP TEXT</p>
+                <p id="topText" class="top-bottom-text txt-espaciado">TOP TEXT</p>
                 <div id="imgMeme" class="img-meme"></div>
-                <p id="bottomText" class="top-bottom-text">BOTTOM TEXT</p>
+                <p id="bottomText" class="top-bottom-text txt-espaciado">BOTTOM TEXT</p>
             </div>
         </main>
         <button id="btnDownload">Descargar</button>
@@ -214,12 +214,12 @@ tengamos que hacer el tema oscuro y claro -->
                     </div>
                     <div class="panels">
                         <h3 class="div-title">ESPACIADO</h3>
-                        <input class="input fuentes-size" type="text" id="fuentesSizeUrl" placeholder="aca vaNUMEROS" />
+                        <input class="input fuentes-size" type="number" id="txtEspaciado" min="10" max="50" value="35" />
                     </div>
                     <div class="panels">
                         <h3 class="div-title">INTERLINEADO</h3>
-                        <label for="idInterlineado"></label>
-                        <select id="idInterlineado">
+                        <label for="interlineado"></label>
+                        <select id="interlineado">
                             <option value="0.8">0.8</option>
                             <option value="1">1</option>
                             <option value="1.2">1.2</option>

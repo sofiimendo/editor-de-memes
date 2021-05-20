@@ -74,7 +74,7 @@ const cambiarTamano = () => {
   topText.style.fontSize = cambiarTamanoletra.value + 'px';
   bottomText.style.fontSize = cambiarTamanoletra.value + 'px';
 }
-cambiarTamanoletra.addEventListener('change', cambiarTamano)
+cambiarTamanoletra.addEventListener('input', cambiarTamano)
 
 // CAMBIAR FUENTE
 const cambiarTipoDeFuente = document.getElementById('letras')
@@ -116,28 +116,10 @@ escribirSup.addEventListener("input", cambiarTexto)
 escribirInf.addEventListener("input", cambiarTexto)
 
 
-//cambiar color texto
-
-// const cambiarColorTexto = document.getElementById('color-fuente')
-// const cambiarColorText = () => {
-//   topText.style.color = cambiarColorTexto.value
-//   bottomText.style.color = cambiarColorTexto.value
-// }
-// cambiarColorTexto.addEventListener('change', cambiarColorText)
-
-//cambiar fondo texto
-
-// const cambiarColorFondo = document.getElementById('fondo-fuente')
-// const cambiarFondoText = () => {
-//   topText.style.background = cambiarColorFondo.value
-//   bottomText.style.background = cambiarColorFondo.value
-// }
-// cambiarColorFondo.addEventListener('change', cambiarFondoText)
-
 //cambia color y codigo de color segun el color elegido
 const cambiarColorTexto = document.getElementById('color-fuente');
 const cambiarCodigoTexto = document.getElementById('codColorText');
-cambiarColorTexto.addEventListener('change', () => {
+cambiarColorTexto.addEventListener('input', () => {
   topText.style.color = `${cambiarColorTexto.value}`
   bottomText.style.color = `${cambiarColorTexto.value}`
   cambiarCodigoTexto.innerText = cambiarColorTexto.value.toUpperCase();
@@ -146,7 +128,7 @@ cambiarColorTexto.addEventListener('change', () => {
 //cambia fondo y codigo de color segun el color elegido
 const cambiarColorFondo = document.getElementById('fondo-fuente');
 const cambiarCodigoFondo = document.getElementById('codColorBackground');
-cambiarColorFondo.addEventListener('change', () => {
+cambiarColorFondo.addEventListener('input', () => {
   topText.style.backgroundColor = `${cambiarColorFondo.value}`
   bottomText.style.background = `${cambiarColorFondo.value}`
   cambiarCodigoFondo.innerText = cambiarColorFondo.value.toUpperCase();
@@ -189,15 +171,20 @@ btnLightContorno.addEventListener('click', cambiarContorno);
 
 
 //espaciado
-// const cambiarColorFondo = document.getElementById('fondo-fuente')
-// const cambiarFondoText = () => {
-//   topText.style.background = cambiarColorFondo.value
-//   bottomText.style.background = cambiarColorFondo.value
-// }
-// cambiarColorFondo.addEventListener('change',cambiarFondoText)
+const textoEspaciado = document.getElementById('txtEspaciado');
+textoEspaciado.addEventListener('input', () => {
+  const textoValue = textoEspaciado.value;
+  topText.style.padding = `${textoValue}px 50px`;
+  bottomText.style.padding = `${textoValue}px 50px`;
+})
 
 //interlineado 
-//linehight
+const textoInterlineado = document.getElementById('interlineado');
+textoInterlineado.addEventListener('input', () =>{
+  const interlineadoValue = textoInterlineado.value;
+  topText.style.lineHeight = interlineadoValue;
+  bottomText.style.lineHeight = interlineadoValue;
+})
 
 
 
