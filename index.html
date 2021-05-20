@@ -2,22 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="asideImage.css">
-    <link rel="stylesheet" href="asideText.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor de memes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="asideImage.css" />
+    <link rel="stylesheet" href="asideText.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fredericka+the+Great&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body class="dark">
@@ -32,8 +34,12 @@ les di tambien las clases btn-appearance btn-dark-appearance
 y btn-appearance btn-light-appearance para cuando 
 tengamos que hacer el tema oscuro y claro -->
         <div class="btns-container" id="btns-container">
-            <button class="buttons btn" id="btn-img"> <i class="icon-size far fa-file-image"></i>Imagen</button>
-            <button class="buttons btn" id="btn-txt"><i class="icon-size fas fa-font"></i> Texto</button>
+            <button class="buttons btn" id="btn-img">
+                <i class="icon-size far fa-file-image"></i>Imagen
+            </button>
+            <button class="buttons btn" id="btn-txt">
+                <i class="icon-size fas fa-font"></i> Texto
+            </button>
             <button class="buttons btn btn-appearance btn-dark-appearance" id="button-dark-appearance">
                 <i class="icon-size fas fa-lightbulb"></i><span id="text-theme"> Modo Claro</span>
             </button>
@@ -44,11 +50,11 @@ tengamos que hacer el tema oscuro y claro -->
         <main>
             <div class="editor-content" id="editorContent">
                 <p id="topText" class="top-bottom-text">TOP TEXT</p>
-                <div id="imgMeme" class="img-meme">
-                </div>
+                <div id="imgMeme" class="img-meme"></div>
                 <p id="bottomText" class="top-bottom-text">BOTTOM TEXT</p>
             </div>
         </main>
+        <button id="btnDownload">Descargar</button>
         <!-- ASIDE imagen -->
         <!-- ASIDE imagen -->
         <section class="aside img-aside panel-aside" id="panel-aside-img">
@@ -58,16 +64,16 @@ tengamos que hacer el tema oscuro y claro -->
                 <!-------- url  ----------->
                 <div class="panels">
                     <h3 class="div-title">URL</h3>
-                    <input class="input input-url" type="text" id="imgUrl" placeholder="Ingresar URL">
+                    <input class="input input-url" type="text" id="imgUrl" placeholder="Ingresar URL" />
                 </div>
                 <!---- fondo  ---------->
                 <!---- fondo  ---------->
                 <div class="panels">
                     <h3 class="div-title">FONDO</h3>
                     <div class="div-fondo-color">
-                        <div>
-                            <input class="input input-fondo-color" type="color" id="colorFondo"
-                                placeholder="Ingresar Color">
+                        <div id="colorBlend">
+                            <input class="input input-fondo-color" type="color" id="colorFondo" value="#FFFFFF" />
+                            <label id="backgroundColorImg">#FFFFFF</label>
                         </div>
                         <div>
                             <select name="" id="imgBackgroundFilter">
@@ -88,33 +94,33 @@ tengamos que hacer el tema oscuro y claro -->
                     <h3 class="div-title">FILTROS</h3>
                     <label for="">BRILLO</label>
                     <input type="range" id="brightness" class="filter" data-property="brightness" min="0" max="1"
-                        step="0.1" value="1">
+                        step="0.1" value="1" />
                     <label for="">OPACIDAD</label>
-                    <input type="range" id="opacity" class="filter" data-property="opacity" min="0" max="1"
-                        step="0.1" value="1">
+                    <input type="range" id="opacity" class="filter" data-property="opacity" min="0" max="1" step="0.1"
+                        value="1" />
                     <label for="">CONTRASTE</label>
-                    <input type="range" id="contrast" class="filter" data-property="contrasts" min="100"
-                        max="1000" step="1" value="100">
+                    <input type="range" id="contrast" class="filter" data-property="contrasts" min="100" max="1000"
+                        step="1" value="100" />
                     <label for="">DESENFOQUE</label>
                     <input type="range" id="blur" class="filter" data-property="blur" min="0" max="10" step="0.1"
-                        value="0">
+                        value="0" />
                     <label for="">ESCALA DE GRISES</label>
                     <input type="range" id="grayScale" class="filter" data-property="grayScale min=" 0" max="100"
                         step="1" value="0">
                     <label for="">SEPIA</label>
                     <input type="range" id="sepia" class="filter" data-property="sepia" min="0" max="100" step="1"
-                        value="0">
+                        value="0" />
                     <label for="">HUE</label>
-                    <input type="range" id="hueRotation" class="filter" data-property="hue" min="0" max="359"
-                        step="1" value="0">
+                    <input type="range" id="hueRotation" class="filter" data-property="hue" min="0" max="359" step="1"
+                        value="0" />
                     <label for="">SATURADO</label>
-                    <input type="range" id="saturate" class="filter" data-property="saturation" min="100"
-                        max="1000" step="10" value="100">
+                    <input type="range" id="saturate" class="filter" data-property="saturation" min="100" max="1000"
+                        step="10" value="100" />
                     <label for="">NEGATIVO</label>
-                    <input type="range" id="invert" class="filter" data-property="negative" min="0" max="1"
-                        step="0.1" value="0">
+                    <input type="range" id="invert" class="filter" data-property="negative" min="0" max="1" step="0.1"
+                        value="0" />
                 </div>
-                <button class="btn">Reestablecer filtros</button>
+                <button id="btnReset">Reestablecer filtros</button>
             </aside>
         </section>
         <!-- ASIDE txt -->
@@ -128,9 +134,9 @@ tengamos que hacer el tema oscuro y claro -->
                     <h3 class="div-title">SUPERIOR</h3>
                     <label for="idTxtSup"></label>
                     <textarea id="idTxtSup" cols="22" rows="1" maxlength="100">
-                </textarea>
+            </textarea>
                     <div>
-                        <input id="idSinTextoSuperior"  type="checkbox" value="check" />
+                        <input id="idSinTextoSuperior" type="checkbox" value="check" />
                         <label for="textoSuperior">Sin texto superior</label>
                     </div>
                 </div>
@@ -138,9 +144,9 @@ tengamos que hacer el tema oscuro y claro -->
                     <h3 class="div-title">INFERIOR</h3>
                     <label for="idTxtInf"></label>
                     <textarea id="idTxtInf" cols="22" rows="1" maxlength="1000">
-                </textarea>
+            </textarea>
                     <div>
-                        <input id="idSinTextoInferior"  type="checkbox" value="check" />
+                        <input id="idSinTextoInferior" type="checkbox" value="check" />
                         <label for="textoInferior">Sin texto inferior</label>
                     </div>
                 </div>
@@ -148,26 +154,32 @@ tengamos que hacer el tema oscuro y claro -->
                     <div class="panels">
                         <h3 class="div-title">FUENTE</h3>
                         <select name="" id="letras">
-                          <option value="Arial">Arial</option>
-                          <option value="Arial Black">Arial Black</option>
-                          <option value="American Typewriter">American Typewriter</option>
-                          <option value="Andale Mono">Andale Mono</option>
-                          <option selected value="Comic Sans MS">Comic Sans MS</option>
-                          <option value="Helvetica">Helvetica</option>
-                          <option value="Impact">Impact</option>
-                          <option value="Verdana">Verdana</option>
-                          <option value="Times New Roman">Times New Roman</option>          
+                            <option value="Arial">Arial</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="American Typewriter">American Typewriter</option>
+                            <option value="Andale Mono">Andale Mono</option>
+                            <option selected value="Comic Sans MS">Comic Sans MS</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Impact">Impact</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Times New Roman">Times New Roman</option>
                         </select>
                         <!-- <input class="las-fuentes" type="text" id="lasFuentesUrl" placeholder="aca van alas fuentes"> -->
                         <div class="size-align-font-txt">
                             <div>
-                                <input class="input fuentes-size" type="number" id="fuentesSizeUrl" min='10' max='50' value= '40'
-                                >                                                                   
+                                <input class="input fuentes-size" type="number" id="fuentesSizeUrl" min="10" max="50"
+                                    value="40" />
                             </div>
                             <div class="align-btns">
-                                <button class="btn-txt-align-icon"><i class="fas fa-align-left" id="alineacion-izq"></i></button>
-                                <button class="btn-txt-align-icon"><i class="fas fa-align-center" id="alineacion-centro"></i></button>
-                                <button class="btn-txt-align-icon"><i class="fas fa-align-right" id="alineacion-der"></i></button>
+                                <button class="btn-txt-align-icon">
+                                    <i class="fas fa-align-left" id="alineacion-izq"></i>
+                                </button>
+                                <button class="btn-txt-align-icon">
+                                    <i class="fas fa-align-center" id="alineacion-centro"></i>
+                                </button>
+                                <button class="btn-txt-align-icon">
+                                    <i class="fas fa-align-right" id="alineacion-der"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -197,7 +209,7 @@ tengamos que hacer el tema oscuro y claro -->
                     </div>
                     <div class="panels">
                         <h3 class="div-title">ESPACIADO</h3>
-                        <input class="input fuentes-size" type="text" id="fuentesSizeUrl" placeholder="aca vaNUMEROS">
+                        <input class="input fuentes-size" type="text" id="fuentesSizeUrl" placeholder="aca vaNUMEROS" />
                     </div>
                     <div class="panels">
                         <h3 class="div-title">INTERLINEADO</h3>
@@ -210,18 +222,13 @@ tengamos que hacer el tema oscuro y claro -->
                             <option value="2">2</option>
                             <option value="2.5">2.5</option>
                         </select>
-
                     </div>
                 </div>
             </aside>
         </section>
     </div>
 
-
-
-
     <script src="script.js"></script>
-
 </body>
 
 </html>
