@@ -14,20 +14,18 @@ const body = document.querySelector('body');
 btnDark.addEventListener('click', () => {
   body.classList.toggle("dark");
   body.classList.toggle("light");
-  if(body.classList.contains("dark")){
+  if (body.classList.contains("dark")) {
     textTheme.innerText = "Modo Claro"
-  }else{
+  } else {
     textTheme.innerText = "Modo Oscuro"
   }
 })
-
-// cambiar texto (probemos desp de hacerlas x separado)
 
 
 // PARA QUE APAREZCA Y DESAPAREZCA EL ASIDE DE TEXTO
 const panelAsideTexto = document.getElementById('panel-aside-txt')
 panelAsideTexto.style = 'display: none'
-btnTxt.addEventListener('click',() => {
+btnTxt.addEventListener('click', () => {
   panelAsideTexto.style = 'display: inline'
   panelAsideImg.style = 'display: none'
 })
@@ -35,7 +33,7 @@ btnTxt.addEventListener('click',() => {
 // PARA QUE APAREZCA  EL ASIDE DE IMAGEN
 
 panelAsideImg.style = 'display: inline'
-btnImg.addEventListener('click',() => {
+btnImg.addEventListener('click', () => {
   panelAsideImg.style = 'display: inline'
   panelAsideTexto.style = 'display: none'
 })
@@ -43,10 +41,10 @@ btnImg.addEventListener('click',() => {
 // CAMBIA TEXTO SUPERIOR
 const escribirSup = document.getElementById("idTxtSup");
 const topText = document.getElementById("topText")
-const cambiarTextoSuperior = ()=>{
+const cambiarTextoSuperior = () => {
   topText.innerHTML = escribirSup.value;
 };
-escribirSup.addEventListener("input",cambiarTextoSuperior)
+escribirSup.addEventListener("input", cambiarTextoSuperior)
 
 // CAMBIA TEXTO INFERIOR
 const escribirInf = document.getElementById('idTxtInf')
@@ -54,7 +52,7 @@ const bottomText = document.getElementById('bottomText')
 const cambiarTextoInferior = ()=>{
   bottomText.innerHTML = escribirInf.value;
 };
-  escribirInf.addEventListener("input",cambiarTextoInferior)
+escribirInf.addEventListener("input", cambiarTextoInferior)
 
 
 //SACA TEXTO SUPERIOR
@@ -120,17 +118,33 @@ escribirInf.addEventListener("input", cambiarTexto)
 
 //Traer imagen
 const urlImg = document.getElementById('imgUrl');
-urlImg.addEventListener('change',() => {
+urlImg.addEventListener('change', () => {
   imgMeme.style.backgroundImage = `url('${urlImg.value}')`;
 })
 
+//Background colorFondo:
+const backgroundImgColor = document.getElementById('colorFondo');
+const colorHex = document.getElementById('backgroundColorImg');
+backgroundImgColor.addEventListener('change', () => {
+  imgMeme.style.backgroundColor = `${backgroundImgColor.value}`
+  colorHex.innerText = backgroundImgColor.value.toUpperCase();
+})
 
-imgMeme.style.backgroundImage = `url('https://i.pinimg.com/originals/08/99/ea/0899eafb344f09b3656c18938718e1ff.jpg')`;
-
-//Background filter:
+//Background imgBackgorundFilter:
 const backgroundFilter = document.getElementById('imgBackgroundFilter');
 backgroundFilter.addEventListener('change', () => {
   imgMeme.style.backgroundBlendMode = backgroundFilter.value
+})
+
+//Boton descarga de imagen
+const contenedorMeme = document.getElementById('editorContent')
+const botonDescarga = document.getElementById('btnDownload');
+botonDescarga.addEventListener('click', () =>{
+  domtoimage.toBlob(contenedorMeme)
+  .then(function (blob) {
+      window.saveAs(blob, 'meme.png');
+  });
+
 })
 
 //Inputs filtros Imagenes:
@@ -158,5 +172,20 @@ const valores = () => {
   imgMeme.style.filter = `brightness(${brilloValue}) opacity(${opacidadValue}) contrast(${contrasteValue}%) blur(${desenfoqueValue}px) grayscale(${escalaGrisesValue}%) sepia(${sepiaValue}%) hue-rotate(${hueValue}deg) saturate(${saturadoValue}%) invert(${negativoValue})`;
 }
 for (let i = 0; i < filtros.length; i++) {
-  filtros[i].addEventListener('input',valores);
+  filtros[i].addEventListener('input', valores);
 }
+
+//Boton resetear filtros
+const resetFilter = document.getElementById('btnReset');
+resetFilter.addEventListener('click', () => {
+  brillo.value = 1;
+  opacidad.value = 1;
+  contraste.value = 100;
+  desenfoque.value = 0;
+  escalaGrises.value = 0;
+  sepia.value = 0;
+  hue.value = 0;
+  saturado.value = 100;
+  negativo.value = 0;
+  valores();
+})
