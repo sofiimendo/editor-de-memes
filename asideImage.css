@@ -3,7 +3,7 @@
 }
 .div-fondo-color {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }    
 .img-meme{
     height: 100%;
@@ -12,8 +12,6 @@
     background-position: center;
     background-repeat: no-repeat;
     object-fit: contain;
-
-
 }
 .inputs-fondo {
     background-color: rgb(164, 236, 197);
