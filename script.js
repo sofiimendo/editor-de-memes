@@ -49,7 +49,7 @@ escribirSup.addEventListener("input", cambiarTextoSuperior)
 // CAMBIA TEXTO INFERIOR
 const escribirInf = document.getElementById('idTxtInf')
 const bottomText = document.getElementById('bottomText')
-const cambiarTextoInferior = ()=>{
+const cambiarTextoInferior = () => {
   bottomText.innerHTML = escribirInf.value;
 };
 escribirInf.addEventListener("input", cambiarTextoInferior)
@@ -58,24 +58,23 @@ escribirInf.addEventListener("input", cambiarTextoInferior)
 //SACA TEXTO SUPERIOR
 const esconderTextoSuperior = document.getElementById('idSinTextoSuperior')
 const esconderTextoInferior = document.getElementById('idSinTextoInferior')
-const sacaTextoSup =(event) =>{
-  if (event.target === esconderTextoSuperior){
+const sacaTextoSup = (event) => {
+  if (event.target === esconderTextoSuperior) {
     topText.classList.toggle('esconderTexto')
-  }
-  else if (event.target === esconderTextoInferior){
+  } else if (event.target === esconderTextoInferior) {
     bottomText.classList.toggle('esconderTexto')
   }
-  }
-  esconderTextoSuperior.addEventListener('click',sacaTextoSup)
-  esconderTextoInferior.addEventListener('click',sacaTextoSup)
+}
+esconderTextoSuperior.addEventListener('click', sacaTextoSup)
+esconderTextoInferior.addEventListener('click', sacaTextoSup)
 
 //  CAMBIAR TAMAÑO DE LETRA 
 const cambiarTamanoletra = document.getElementById('fuentesSizeUrl')
-const cambiarTamano =() => {
+const cambiarTamano = () => {
   topText.style.fontSize = cambiarTamanoletra.value + 'px';
   bottomText.style.fontSize = cambiarTamanoletra.value + 'px';
 }
-cambiarTamanoletra.addEventListener('change',cambiarTamano)
+cambiarTamanoletra.addEventListener('input', cambiarTamano)
 
 // CAMBIAR FUENTE
 const cambiarTipoDeFuente = document.getElementById('letras')
@@ -83,31 +82,31 @@ const cambiarTipoDeLetra = () => {
   topText.style.fontFamily = cambiarTipoDeFuente.value
   bottomText.style.fontFamily = cambiarTipoDeFuente.value
 }
-cambiarTipoDeFuente.addEventListener('change',cambiarTipoDeLetra)
+cambiarTipoDeFuente.addEventListener('change', cambiarTipoDeLetra)
 
 //ALINEACION IZQUIERDA
 const cambiarAlineacionIzquierda = document.getElementById('alineacion-izq')
 const cambiarAlinIzq = () => {
-  topText.style.justifyContent = 'flex-start' 
+  topText.style.justifyContent = 'flex-start'
   bottomText.style.justifyContent = 'flex-start'
 }
-cambiarAlineacionIzquierda.addEventListener('click',cambiarAlinIzq)
+cambiarAlineacionIzquierda.addEventListener('click', cambiarAlinIzq)
 
 //ALINEACION CENTRO
 const cambiarAlineacionCentro = document.getElementById('alineacion-centro')
 const cambiarAlinCentro = () => {
-  topText.style.justifyContent = 'center' 
+  topText.style.justifyContent = 'center'
   bottomText.style.justifyContent = 'center'
 }
-cambiarAlineacionCentro.addEventListener('click',cambiarAlinCentro)
+cambiarAlineacionCentro.addEventListener('click', cambiarAlinCentro)
 
 //ALINEACION DERECHA
 const cambiarAlineacionDerecha = document.getElementById('alineacion-der')
 const cambiarAlinDer = () => {
-  topText.style.justifyContent = 'flex-end' 
+  topText.style.justifyContent = 'flex-end'
   bottomText.style.justifyContent = 'flex-end'
 }
-cambiarAlineacionDerecha.addEventListener('click',cambiarAlinDer)
+cambiarAlineacionDerecha.addEventListener('click', cambiarAlinDer)
 
 const cambiarTexto = () => {
   topText.innerHTML = escribirSup.value;
@@ -117,32 +116,32 @@ escribirSup.addEventListener("input", cambiarTexto)
 escribirInf.addEventListener("input", cambiarTexto)
 
 
-//cambiar color texto
+//cambia color y codigo de color segun el color elegido
+const cambiarColorTexto = document.getElementById('color-fuente');
+const cambiarCodigoTexto = document.getElementById('codColorText');
+cambiarColorTexto.addEventListener('input', () => {
+  topText.style.color = `${cambiarColorTexto.value}`
+  bottomText.style.color = `${cambiarColorTexto.value}`
+  cambiarCodigoTexto.innerText = cambiarColorTexto.value.toUpperCase();
+})
 
-const cambiarColorTexto = document.getElementById('color-fuente')
-const cambiarColorText = () => {
-  topText.style.color = cambiarColorTexto.value
-  bottomText.style.color = cambiarColorTexto.value
-}
-cambiarColorTexto.addEventListener('change',cambiarColorText)
-
-//cambiar fondo texto
-
-const cambiarColorFondo = document.getElementById('fondo-fuente')
-const cambiarFondoText = () => {
-  topText.style.background = cambiarColorFondo.value
-  bottomText.style.background = cambiarColorFondo.value
-}
-cambiarColorFondo.addEventListener('change',cambiarFondoText)
+//cambia fondo y codigo de color segun el color elegido
+const cambiarColorFondo = document.getElementById('fondo-fuente');
+const cambiarCodigoFondo = document.getElementById('codColorBackground');
+cambiarColorFondo.addEventListener('input', () => {
+  topText.style.backgroundColor = `${cambiarColorFondo.value}`
+  bottomText.style.background = `${cambiarColorFondo.value}`
+  cambiarCodigoFondo.innerText = cambiarColorFondo.value.toUpperCase();
+})
 
 //fondo transparente
 const transparentCheckBox = document.getElementById('idFondoTransparente')
 const ponerFondoTransparente = () => {
- topText.classList.toggle('fondoTransparenteTop');
- bottomText.classList.toggle('fondoTransparenteBottom')
+  topText.classList.toggle('fondoTransparenteTop');
+  bottomText.classList.toggle('fondoTransparenteBottom')
 }
 
-transparentCheckBox.addEventListener('click',ponerFondoTransparente)
+transparentCheckBox.addEventListener('click', ponerFondoTransparente)
 
 //CONTORNO
 
@@ -151,39 +150,41 @@ const btnDarkContorno = document.getElementById('btnDarkContorno')
 const btnLightContorno = document.getElementById('btnLightContorno')
 
 const cambiarContorno = (event) => {
-  if (event.target ===  btnNoneContorno){
+  if (event.target === btnNoneContorno) {
     topText.classList.remove('light-stroke', 'dark-stroke');
-    bottomText.classList.remove('light-stroke','dark-stroke');
-  } 
-  else if (event.target === btnDarkContorno){
-    topText.classList.remove('light-stroke','stroke-none');
-    bottomText.classList.remove('light-stroke','stroke-none');
+    bottomText.classList.remove('light-stroke', 'dark-stroke');
+  } else if (event.target === btnDarkContorno) {
+    topText.classList.remove('light-stroke', 'stroke-none');
+    bottomText.classList.remove('light-stroke', 'stroke-none');
     topText.classList.add('dark-stroke');
     bottomText.classList.add('dark-stroke');
-  }
-
-  else if (event.target === btnLightContorno){
-    topText.classList.remove('dark-stroke','stroke-none');
-    bottomText.classList.remove('dark-stroke','stroke-none');
+  } else if (event.target === btnLightContorno) {
+    topText.classList.remove('dark-stroke', 'stroke-none');
+    bottomText.classList.remove('dark-stroke', 'stroke-none');
     topText.classList.add('light-stroke');
     bottomText.classList.add('light-stroke');
+  }
 }
-}
-btnNoneContorno.addEventListener('click',cambiarContorno);
-btnDarkContorno.addEventListener('click',cambiarContorno);
-btnLightContorno.addEventListener('click',cambiarContorno);
+btnNoneContorno.addEventListener('click', cambiarContorno);
+btnDarkContorno.addEventListener('click', cambiarContorno);
+btnLightContorno.addEventListener('click', cambiarContorno);
 
 
 //espaciado
-// const cambiarColorFondo = document.getElementById('fondo-fuente')
-// const cambiarFondoText = () => {
-//   topText.style.background = cambiarColorFondo.value
-//   bottomText.style.background = cambiarColorFondo.value
-// }
-// cambiarColorFondo.addEventListener('change',cambiarFondoText)
+const textoEspaciado = document.getElementById('txtEspaciado');
+textoEspaciado.addEventListener('input', () => {
+  const textoValue = textoEspaciado.value;
+  topText.style.padding = `${textoValue}px 50px`;
+  bottomText.style.padding = `${textoValue}px 50px`;
+})
 
 //interlineado 
-//linehight
+const textoInterlineado = document.getElementById('interlineado');
+textoInterlineado.addEventListener('input', () =>{
+  const interlineadoValue = textoInterlineado.value;
+  topText.style.lineHeight = interlineadoValue;
+  bottomText.style.lineHeight = interlineadoValue;
+})
 
 
 
@@ -193,7 +194,7 @@ urlImg.addEventListener('change', () => {
   imgMeme.style.backgroundImage = `url('${urlImg.value}')`;
 })
 
-//Background colorFondo:
+//Para que al cambiar el color de fondo la imagen cambie tmbn el codigo de color:
 const backgroundImgColor = document.getElementById('colorFondo');
 const colorHex = document.getElementById('backgroundColorImg');
 backgroundImgColor.addEventListener('change', () => {
@@ -201,7 +202,7 @@ backgroundImgColor.addEventListener('change', () => {
   colorHex.innerText = backgroundImgColor.value.toUpperCase();
 })
 
-//Background imgBackgorundFilter:
+//Para cambiar los filtros del background de la imagen:
 const backgroundFilter = document.getElementById('imgBackgroundFilter');
 backgroundFilter.addEventListener('change', () => {
   imgMeme.style.backgroundBlendMode = backgroundFilter.value
@@ -210,12 +211,11 @@ backgroundFilter.addEventListener('change', () => {
 //Boton descarga de imagen
 const contenedorMeme = document.getElementById('editorContent')
 const botonDescarga = document.getElementById('btnDownload');
-botonDescarga.addEventListener('click', () =>{
+botonDescarga.addEventListener('click', () => {
   domtoimage.toBlob(contenedorMeme)
-  .then(function (blob) {
+    .then(function (blob) {
       window.saveAs(blob, 'meme.png');
-  });
-
+    });
 })
 
 //Inputs filtros Imagenes:
