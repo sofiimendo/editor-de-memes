@@ -28,7 +28,7 @@
 
 <body class="dark">
     <header class="head">
-        <h1 class="app-name" id="app-name">GENERADOR de MEMES</h1>
+        <h1 class="app-name" id="appName">GENERADOR de MEMES</h1>
         <!---------------BUTTONS----------------------------->
         <!---------------BUTTONS----------------------------->
         <!---------------BUTTONS----------------------------->
@@ -37,20 +37,20 @@ pero a ls botones de dark appearance y light appearance
 les di tambien las clases btn-appearance btn-dark-appearance
 y btn-appearance btn-light-appearance para cuando 
 tengamos que hacer el tema oscuro y claro -->
-        <div class="btns-container" id="btns-container">
-            <button class="buttons btn" id="btn-img">
+        <div class="btns-container" id="btnsContainer">
+            <button class="buttons btn" id="btnImg">
                 <i class="icon-size far fa-file-image"></i>Imagen
             </button>
-            <button class="buttons btn" id="btn-txt">
+            <button class="buttons btn" id="btnTxt">
                 <i class="icon-size fas fa-font"></i> Texto
             </button>
-            <button class="buttons btn btn-appearance btn-dark-appearance" id="button-dark-appearance">
-                <i class="icon-size fas fa-lightbulb"></i><span id="text-theme"> Modo Claro</span>
+            <button class="buttons btn btn-appearance btn-dark-appearance" id="buttonDarkAppearance">
+                <i class="icon-size fas fa-lightbulb"></i><span id="textTheme"> Modo Claro</span>
             </button>
             <!-- este boton va oculto por eso esta comentado-->
         </div>
     </header>
-    <div class="my-main" id="my-main">
+    <div class="my-main" id="myMain">
         <main>
             <div class="editor-content" id="editorContent">
                 <p id="topText" class="top-bottom-text txt-espaciado">TOP TEXT</p>
@@ -61,8 +61,8 @@ tengamos que hacer el tema oscuro y claro -->
         <button id="btnDownload">Descargar</button>
         <!-- ASIDE imagen -->
         <!-- ASIDE imagen -->
-        <section class="aside img-aside panel-aside" id="panel-aside-img">
-            <aside class="aside-img" id="aside-img">
+        <section class="aside img-aside panel-aside" id="panelAsideImg">
+            <aside class="aside-img" id="asideImg">
                 <h2 class="panel-title">IMAGEN</h2>
                 <!-------- url  ----------->
                 <!-------- url  ----------->
@@ -130,33 +130,33 @@ tengamos que hacer el tema oscuro y claro -->
         <!-- ASIDE txt -->
         <!-- ASIDE txt -->
         <!-- ASIDE txt -->
-        <section class="aside txt-aside panel-aside" id="panel-aside-txt">
-            <aside class="aside-txt" id="aside-txt">
+        <section class="aside txt-aside panel-aside" id="panelAsideTxt">
+            <aside class="aside-txt" id="asideTxt">
                 <h2 class="panel-title">TEXTO</h2>
                 <div class="panels">
                     <h3 class="div-title">SUPERIOR</h3>
-                    <label for="idTxtSup"></label>
-                    <textarea id="idTxtSup" cols="22" rows="1" maxlength="100">
+                    <label for="txtSup"></label>
+                    <textarea id="txtSup" cols="22" rows="1" maxlength="100">
             </textarea>
                     <div>
-                        <input id="idSinTextoSuperior" type="checkbox" value="check" />
-                        <label for="textoSuperior">Sin texto superior</label>
+                        <input id="sinTextoSuperior" type="checkbox" value="check" />
+                        <label for="sinTextoSuperior">Sin texto superior</label>
                     </div>
                 </div>
                 <div class="panels">
                     <h3 class="div-title">INFERIOR</h3>
-                    <label for="idTxtInf"></label>
-                    <textarea id="idTxtInf" cols="22" rows="1" maxlength="1000">
+                    <label for="txtInf"></label>
+                    <textarea id="txtInf" cols="22" rows="1" maxlength="1000">
             </textarea>
                     <div>
-                        <input id="idSinTextoInferior" type="checkbox" value="check" />
+                        <input id="sinTextoInferior" type="checkbox" value="check" />
                         <label for="textoInferior">Sin texto inferior</label>
                     </div>
                 </div>
                 <div class="panels">
                     <div class="panels">
                         <h3 class="div-title">FUENTE</h3>
-                        <select name="" id="letras">
+                        <select name="fuentes de letras" id="letras">
                             <option value="Arial">Arial</option>
                             <option value="Arial Black">Arial Black</option>
                             <option value="American Typewriter">American Typewriter</option>
@@ -175,13 +175,13 @@ tengamos que hacer el tema oscuro y claro -->
                             </div>
                             <div class="align-btns">
                                 <button class="btn-txt-align-icon">
-                                    <i class="fas fa-align-left" id="alineacion-izq"></i>
+                                    <i class="fas fa-align-left" id="alineacionIzq"></i>
                                 </button>
                                 <button class="btn-txt-align-icon">
-                                    <i class="fas fa-align-center" id="alineacion-centro"></i>
+                                    <i class="fas fa-align-center" id="alineacionCentro"></i>
                                 </button>
                                 <button class="btn-txt-align-icon">
-                                    <i class="fas fa-align-right" id="alineacion-der"></i>
+                                    <i class="fas fa-align-right" id="alineacionDer"></i>
                                 </button>
                             </div>
                         </div>
@@ -190,17 +190,17 @@ tengamos que hacer el tema oscuro y claro -->
                         <div class="color-fondo">
                             <div>
                                 <h3 class="div-title">COLOR</h3>
-                                <input class="input fuentes-color" type="color" id="color-fuente">
+                                <input class="input fuentes-color" type="color" id="colorFuente">
                                 <label id="codColorText">#000000</label>
                             </div>
                             <div>
                                 <h3 class="div-title">FONDO</h3>
-                                <input class="input fuentes-fondo" type="color" id="fondo-fuente">
+                                <input class="input fuentes-fondo" type="color" id="fondoFuente">
                                 <label id="codColorBackground">#000000</label>
                             </div>
                         </div>
                         <div>
-                            <input id="idFondoTransparente" type="checkbox" value="check" />
+                            <input id="fondoTransparente" type="checkbox" value="check" />
                             <label for="fondoTransparente">Fondo Transparente</label>
                         </div>
                     </div>
