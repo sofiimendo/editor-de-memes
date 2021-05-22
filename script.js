@@ -22,8 +22,8 @@ btnDark.addEventListener('click', () => {
 })
 
 //PARA QUE APAREZCA Y DESAPAREZCA EL ASIDE DE TEXTO
-const panelAsideTexto = document.getElementById('panelAsideTxt');
-panelAsideTexto.style = 'display: none';
+// const panelAsideTexto = document.getElementById('panelAsideTxt');
+panelAsideTxt.style = 'display: none';
 btnTxt.addEventListener('click', () => {
   panelAsideTexto.style = 'display: inline';
   panelAsideImg.style = 'display: none';
