@@ -22,25 +22,26 @@ btnDark.addEventListener('click', () => {
 })
 
 //PARA QUE APAREZCA Y DESAPAREZCA EL ASIDE DE TEXTO
-panelAsideTxt.style.display ='none'
+const panelAsideTexto = document.getElementById('panelAsideTxt');
+panelAsideTexto.style = 'display: none';
 btnTxt.addEventListener('click', () => {
-  panelAsideTxt.style.display = 'inline';
+  panelAsideTexto.style = 'display: inline';
+  panelAsideImg.style = 'display: none';
 })
 
-panelAsideImg.style.display ='inline';
+//PARA QUE APAREZCA  EL ASIDE DE IMAGEN
+panelAsideImg.style = 'display: inline';
 btnImg.addEventListener('click', () => {
-  panelAsideImg.style.display = 'inline';
-  panelAsideTxt.style.display = 'none';
+  panelAsideImg.style = 'display: inline';
+  panelAsideTexto.style = 'display: none';
 })
 
-// //Para que DESEAPAREZCA EL ASIDE DE IMG Y TXT EN MEDIA
 // //Boton close aside
-// const btnAside = document.querySelector('.close-aside');
-// btnAside.addEventListener('click', () => {
-//   panelAsideImg.style = 'display: none';
-//   panelAsideTexto.style = 'display: none';
-// })
-
+const btnAside = document.querySelector('.close-aside');
+btnAside.addEventListener('click', () => {
+  panelAsideImg.style = 'display: none';
+  panelAsideTexto.style = 'display: none';
+})
 //CAMBIA TEXTO SUPERIOR
 const escribirSup = document.getElementById('txtSup');
 const topText = document.getElementById('topText');
