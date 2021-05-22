@@ -1,75 +1,72 @@
-// PARA QUE QUEDE EN MODO CLARO
+//PARA QUE QUEDE EN MODO CLARO
 const imgMeme = document.getElementById('imgMeme');
-const btnDark = document.getElementById('button-dark-appearance');
-const textTheme = document.getElementById('text-theme');
-const appName = document.getElementById('app-name');
-const btnsContainer = document.getElementById('btns-container');
-const btnImg = document.getElementById('btn-img');
-const btnTxt = document.getElementById('btn-txt');
-const myMain = document.getElementById('my-main');
-const panelAsideImg = document.getElementById('panel-aside-img');
-const panelAsideTxt = document.getElementById('panel-aside-txt');
+const btnDark = document.getElementById('buttonDarkAppearance');
+const textTheme = document.getElementById('textTheme');
+const appName = document.getElementById('appName');
+const btnsContainer = document.getElementById('btnsContainer');
+const btnImg = document.getElementById('btnImg');
+const btnTxt = document.getElementById('btnTxt');
+const myMain = document.getElementById('myMain');
+const panelAsideImg = document.getElementById('panelAsideImg');
+const panelAsideTxt = document.getElementById('panelAsideTxt');
 const body = document.querySelector('body');
 
 btnDark.addEventListener('click', () => {
-  body.classList.toggle("dark");
-  body.classList.toggle("light");
-  if (body.classList.contains("dark")) {
-    textTheme.innerText = "Modo Claro"
+  body.classList.toggle('dark');
+  body.classList.toggle('light');
+  if (body.classList.contains('dark')) {
+    textTheme.innerText = 'Modo Claro';
   } else {
-    textTheme.innerText = "Modo Oscuro"
+    textTheme.innerText = 'Modo Oscuro';
   }
 })
 
-
-// PARA QUE APAREZCA Y DESAPAREZCA EL ASIDE DE TEXTO
-const panelAsideTexto = document.getElementById('panel-aside-txt')
-panelAsideTexto.style = 'display: none'
+//PARA QUE APAREZCA Y DESAPAREZCA EL ASIDE DE TEXTO
+const panelAsideTexto = document.getElementById('panelAsideTxt');
+panelAsideTexto.style = 'display: none';
 btnTxt.addEventListener('click', () => {
-  panelAsideTexto.style = 'display: inline'
-  panelAsideImg.style = 'display: none'
+  panelAsideTexto.style = 'display: inline';
+  panelAsideImg.style = 'display: none';
 })
 
-// PARA QUE APAREZCA  EL ASIDE DE IMAGEN
-
-panelAsideImg.style = 'display: inline'
+//PARA QUE APAREZCA  EL ASIDE DE IMAGEN
+panelAsideImg.style = 'display: inline';
 btnImg.addEventListener('click', () => {
-  panelAsideImg.style = 'display: inline'
-  panelAsideTexto.style = 'display: none'
+  panelAsideImg.style = 'display: inline';
+  panelAsideTexto.style = 'display: none';
 })
 
-// CAMBIA TEXTO SUPERIOR
-const escribirSup = document.getElementById("idTxtSup");
-const topText = document.getElementById("topText")
+//CAMBIA TEXTO SUPERIOR
+const escribirSup = document.getElementById('txtSup');
+const topText = document.getElementById('topText');
 const cambiarTextoSuperior = () => {
   topText.innerHTML = escribirSup.value;
 };
-escribirSup.addEventListener("input", cambiarTextoSuperior)
+escribirSup.addEventListener('input', cambiarTextoSuperior)
 
-// CAMBIA TEXTO INFERIOR
-const escribirInf = document.getElementById('idTxtInf')
-const bottomText = document.getElementById('bottomText')
+//CAMBIA TEXTO INFERIOR
+const escribirInf = document.getElementById('txtInf');
+const bottomText = document.getElementById('bottomText');
 const cambiarTextoInferior = () => {
   bottomText.innerHTML = escribirInf.value;
 };
-escribirInf.addEventListener("input", cambiarTextoInferior)
+escribirInf.addEventListener('input', cambiarTextoInferior)
 
-
-//SACA TEXTO SUPERIOR
-const esconderTextoSuperior = document.getElementById('idSinTextoSuperior')
-const esconderTextoInferior = document.getElementById('idSinTextoInferior')
+//SACA TEXTO SUPERIOR E INFERIOR
+const esconderTextoSuperior = document.getElementById('sinTextoSuperior');
+const esconderTextoInferior = document.getElementById('sinTextoInferior');
 const sacaTextoSup = (event) => {
   if (event.target === esconderTextoSuperior) {
-    topText.classList.toggle('esconderTexto')
+    topText.classList.toggle('esconderTexto');
   } else if (event.target === esconderTextoInferior) {
-    bottomText.classList.toggle('esconderTexto')
+    bottomText.classList.toggle('esconderTexto');
   }
 }
 esconderTextoSuperior.addEventListener('click', sacaTextoSup)
 esconderTextoInferior.addEventListener('click', sacaTextoSup)
 
 //  CAMBIAR TAMAÑO DE LETRA 
-const cambiarTamanoletra = document.getElementById('fuentesSizeUrl')
+const cambiarTamanoletra = document.getElementById('fuentesSizeUrl');
 const cambiarTamano = () => {
   topText.style.fontSize = cambiarTamanoletra.value + 'px';
   bottomText.style.fontSize = cambiarTamanoletra.value + 'px';
@@ -77,34 +74,34 @@ const cambiarTamano = () => {
 cambiarTamanoletra.addEventListener('input', cambiarTamano)
 
 // CAMBIAR FUENTE
-const cambiarTipoDeFuente = document.getElementById('letras')
+const cambiarTipoDeFuente = document.getElementById('letras');
 const cambiarTipoDeLetra = () => {
-  topText.style.fontFamily = cambiarTipoDeFuente.value
-  bottomText.style.fontFamily = cambiarTipoDeFuente.value
+  topText.style.fontFamily = cambiarTipoDeFuente.value;
+  bottomText.style.fontFamily = cambiarTipoDeFuente.value;
 }
 cambiarTipoDeFuente.addEventListener('change', cambiarTipoDeLetra)
 
 //ALINEACION IZQUIERDA
-const cambiarAlineacionIzquierda = document.getElementById('alineacion-izq')
+const cambiarAlineacionIzquierda = document.getElementById('alineacionIzq');
 const cambiarAlinIzq = () => {
-  topText.style.justifyContent = 'flex-start'
-  bottomText.style.justifyContent = 'flex-start'
+  topText.style.justifyContent = 'flex-start';
+  bottomText.style.justifyContent = 'flex-start';
 }
 cambiarAlineacionIzquierda.addEventListener('click', cambiarAlinIzq)
 
 //ALINEACION CENTRO
-const cambiarAlineacionCentro = document.getElementById('alineacion-centro')
+const cambiarAlineacionCentro = document.getElementById('alineacionCentro');
 const cambiarAlinCentro = () => {
-  topText.style.justifyContent = 'center'
-  bottomText.style.justifyContent = 'center'
+  topText.style.justifyContent = 'center';
+  bottomText.style.justifyContent = 'center';
 }
 cambiarAlineacionCentro.addEventListener('click', cambiarAlinCentro)
 
 //ALINEACION DERECHA
-const cambiarAlineacionDerecha = document.getElementById('alineacion-der')
+const cambiarAlineacionDerecha = document.getElementById('alineacionDer');
 const cambiarAlinDer = () => {
-  topText.style.justifyContent = 'flex-end'
-  bottomText.style.justifyContent = 'flex-end'
+  topText.style.justifyContent = 'flex-end';
+  bottomText.style.justifyContent = 'flex-end';
 }
 cambiarAlineacionDerecha.addEventListener('click', cambiarAlinDer)
 
@@ -112,39 +109,36 @@ const cambiarTexto = () => {
   topText.innerHTML = escribirSup.value;
   bottomText.innerHTML = escribirInf.value;
 };
-escribirSup.addEventListener("input", cambiarTexto)
-escribirInf.addEventListener("input", cambiarTexto)
+escribirSup.addEventListener('input', cambiarTexto)
+escribirInf.addEventListener('input', cambiarTexto)
 
-
-//cambia color y codigo de color segun el color elegido
-const cambiarColorTexto = document.getElementById('color-fuente');
+//Cambia color y codigo de color segun el color elegido
+const cambiarColorTexto = document.getElementById('colorfuente');
 const cambiarCodigoTexto = document.getElementById('codColorText');
-cambiarColorTexto.addEventListener('input', () => {
-  topText.style.color = `${cambiarColorTexto.value}`
-  bottomText.style.color = `${cambiarColorTexto.value}`
-  cambiarCodigoTexto.innerText = cambiarColorTexto.value.toUpperCase();
+cambiarCodigoTexto.addEventListener('input', () => {
+  topText.style.backgroundColor = `${cambiarCodigoTexto.value}`;
+  bottomText.style.background = `${cambiarCodigoTexto.value}`;
+  cambiarCodigoFondo.innerText = cambiarCodigoTexto.value.toUpperCase();
 })
 
-//cambia fondo y codigo de color segun el color elegido
-const cambiarColorFondo = document.getElementById('fondo-fuente');
+//Cambia fondo y codigo de color segun el color elegido
+const cambiarColorFondo = document.getElementById('fondoFuente');
 const cambiarCodigoFondo = document.getElementById('codColorBackground');
 cambiarColorFondo.addEventListener('input', () => {
-  topText.style.backgroundColor = `${cambiarColorFondo.value}`
-  bottomText.style.background = `${cambiarColorFondo.value}`
+  topText.style.backgroundColor = `${cambiarColorFondo.value}`;
+  bottomText.style.background = `${cambiarColorFondo.value}`;
   cambiarCodigoFondo.innerText = cambiarColorFondo.value.toUpperCase();
 })
 
-//fondo transparente
-const transparentCheckBox = document.getElementById('idFondoTransparente')
+//Fondo transparente
+const transparentCheckBox = document.getElementById('fondoTransparente');
 const ponerFondoTransparente = () => {
   topText.classList.toggle('fondoTransparenteTop');
-  bottomText.classList.toggle('fondoTransparenteBottom')
+  bottomText.classList.toggle('fondoTransparenteBottom');
 }
-
 transparentCheckBox.addEventListener('click', ponerFondoTransparente)
 
 //CONTORNO
-
 const btnNoneContorno = document.getElementById('btnNoneContorno')
 const btnDarkContorno = document.getElementById('btnDarkContorno')
 const btnLightContorno = document.getElementById('btnLightContorno')
@@ -169,8 +163,7 @@ btnNoneContorno.addEventListener('click', cambiarContorno);
 btnDarkContorno.addEventListener('click', cambiarContorno);
 btnLightContorno.addEventListener('click', cambiarContorno);
 
-
-//espaciado
+//Espaciado
 const textoEspaciado = document.getElementById('txtEspaciado');
 textoEspaciado.addEventListener('input', () => {
   const textoValue = textoEspaciado.value;
@@ -178,15 +171,13 @@ textoEspaciado.addEventListener('input', () => {
   bottomText.style.padding = `${textoValue}px 50px`;
 })
 
-//interlineado 
+//Interlineado 
 const textoInterlineado = document.getElementById('interlineado');
 textoInterlineado.addEventListener('input', () =>{
   const interlineadoValue = textoInterlineado.value;
   topText.style.lineHeight = interlineadoValue;
   bottomText.style.lineHeight = interlineadoValue;
 })
-
-
 
 //Traer imagen
 const urlImg = document.getElementById('imgUrl');
@@ -197,7 +188,7 @@ urlImg.addEventListener('change', () => {
 //Para que al cambiar el color de fondo la imagen cambie tmbn el codigo de color:
 const backgroundImgColor = document.getElementById('colorFondo');
 const colorHex = document.getElementById('backgroundColorImg');
-backgroundImgColor.addEventListener('change', () => {
+backgroundImgColor.addEventListener('input', () => {
   imgMeme.style.backgroundColor = `${backgroundImgColor.value}`
   colorHex.innerText = backgroundImgColor.value.toUpperCase();
 })
