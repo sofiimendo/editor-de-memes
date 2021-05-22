@@ -27,9 +27,7 @@ btnTxt.addEventListener('click', () => {
   panelAsideTxt.style.display = 'inline';
 })
 
-const imagenAsideFixed = document.getElementById('panelAsideImg')
-imagenAsideFixed
-.style.display ='inline';
+panelAsideImg.style.display ='inline';
 btnImg.addEventListener('click', () => {
   panelAsideImg.style.display = 'inline';
   panelAsideTxt.style.display = 'none';
