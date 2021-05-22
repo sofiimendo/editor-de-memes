@@ -7,8 +7,8 @@ const btnsContainer = document.getElementById('btnsContainer');
 const btnImg = document.getElementById('btnImg');
 const btnTxt = document.getElementById('btnTxt');
 const myMain = document.getElementById('myMain');
-const panelAsideImg = document.getElementById('panelAsideImg');
-const panelAsideTxt = document.getElementById('panelAsideTxt');
+const panelAsideImg = document.getElementById('asideImg');
+const panelAsideTxt = document.getElementById('asideTxt');
 const body = document.querySelector('body');
 
 btnDark.addEventListener('click', () => {
@@ -36,6 +36,13 @@ btnImg.addEventListener('click', () => {
   panelAsideTexto.style = 'display: none';
 })
 
+//Boton close aside
+const btnAside = document.querySelector('.close-aside');
+const panelAsideImagen =document.getElementById('panelAsideImg');
+btnAside.addEventListener('click', () => {
+  panelAsideTexto.style.display = 'none';
+  panelAsideImagen.style.display ='none';
+})
 //CAMBIA TEXTO SUPERIOR
 const escribirSup = document.getElementById('txtSup');
 const topText = document.getElementById('topText');
@@ -251,3 +258,4 @@ resetFilter.addEventListener('click', () => {
   negativo.value = 0;
   valores();
 })
+
