@@ -36,11 +36,12 @@ btnImg.addEventListener('click', () => {
   panelAsideTexto.style = 'display: none';
 })
 
-// //Boton close aside
+//Boton close aside
 const btnAside = document.querySelector('.close-aside');
+const panelAsideImagen =document.getElementById('panelAsideImg');
 btnAside.addEventListener('click', () => {
-  panelAsideImg.style = 'display: none';
-  panelAsideTexto.style = 'display: none';
+  panelAsideTexto.style.display = 'none';
+  panelAsideImagen.style.display ='none';
 })
 //CAMBIA TEXTO SUPERIOR
 const escribirSup = document.getElementById('txtSup');
