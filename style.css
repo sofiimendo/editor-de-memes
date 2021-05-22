@@ -58,3 +58,14 @@ body{
 .div-title {
     margin-bottom: 1%;
 }
+.close-aside{
+    display: none;
+}
+@media screen and (max-width:450px){
+    .close-aside{
+        display: block;
+    }
+    .aside{
+        width: 100%;
+    }
+}

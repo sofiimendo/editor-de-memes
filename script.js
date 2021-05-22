@@ -7,8 +7,8 @@ const btnsContainer = document.getElementById('btnsContainer');
 const btnImg = document.getElementById('btnImg');
 const btnTxt = document.getElementById('btnTxt');
 const myMain = document.getElementById('myMain');
-const panelAsideImg = document.getElementById('panelAsideImg');
-const panelAsideTxt = document.getElementById('panelAsideTxt');
+const panelAsideImg = document.getElementById('asideImg');
+const panelAsideTxt = document.getElementById('asideTxt');
 const body = document.querySelector('body');
 
 btnDark.addEventListener('click', () => {
@@ -22,19 +22,26 @@ btnDark.addEventListener('click', () => {
 })
 
 //PARA QUE APAREZCA Y DESAPAREZCA EL ASIDE DE TEXTO
-const panelAsideTexto = document.getElementById('panelAsideTxt');
-panelAsideTexto.style = 'display: none';
+panelAsideTxt.style.display ='none'
 btnTxt.addEventListener('click', () => {
-  panelAsideTexto.style = 'display: inline';
-  panelAsideImg.style = 'display: none';
+  panelAsideTxt.style.display = 'inline';
 })
 
-//PARA QUE APAREZCA  EL ASIDE DE IMAGEN
-panelAsideImg.style = 'display: inline';
+const imagenAsideFixed = document.getElementById('panelAsideImg')
+imagenAsideFixed
+.style.display ='inline';
 btnImg.addEventListener('click', () => {
-  panelAsideImg.style = 'display: inline';
-  panelAsideTexto.style = 'display: none';
+  panelAsideImg.style.display = 'inline';
+  panelAsideTxt.style.display = 'none';
 })
+
+// //Para que DESEAPAREZCA EL ASIDE DE IMG Y TXT EN MEDIA
+// //Boton close aside
+// const btnAside = document.querySelector('.close-aside');
+// btnAside.addEventListener('click', () => {
+//   panelAsideImg.style = 'display: none';
+//   panelAsideTexto.style = 'display: none';
+// })
 
 //CAMBIA TEXTO SUPERIOR
 const escribirSup = document.getElementById('txtSup');
@@ -251,3 +258,4 @@ resetFilter.addEventListener('click', () => {
   negativo.value = 0;
   valores();
 })
+
