@@ -36,6 +36,12 @@ btnImg.addEventListener('click', () => {
   panelAsideTexto.style = 'display: none';
 })
 
+// //Boton close aside
+const btnAside = document.querySelector('.close-aside');
+btnAside.addEventListener('click', () => {
+  panelAsideImg.style = 'display: none';
+  panelAsideTexto.style = 'display: none';
+})
 //CAMBIA TEXTO SUPERIOR
 const escribirSup = document.getElementById('txtSup');
 const topText = document.getElementById('topText');
