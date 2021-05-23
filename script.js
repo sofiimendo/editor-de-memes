@@ -7,8 +7,8 @@ const btnsContainer = document.getElementById('btnsContainer');
 const btnImg = document.getElementById('btnImg');
 const btnTxt = document.getElementById('btnTxt');
 const myMain = document.getElementById('myMain');
-const panelAsideImg = document.getElementById('asideImg');
-const panelAsideTxt = document.getElementById('asideTxt');
+const panelAsideImg = document.getElementById('panel-aside-img');
+const panelAsideTxt = document.getElementById('panel-aside-txt');
 const body = document.querySelector('body');
 
 btnDark.addEventListener('click', () => {
@@ -22,10 +22,9 @@ btnDark.addEventListener('click', () => {
 })
 
 //PARA QUE APAREZCA Y DESAPAREZCA EL ASIDE DE TEXTO
-// const panelAsideTexto = document.getElementById('panelAsideTxt');
 panelAsideTxt.style = 'display: none';
 btnTxt.addEventListener('click', () => {
-  panelAsideTexto.style = 'display: inline';
+  panelAsideTxt.style = 'display: inline';
   panelAsideImg.style = 'display: none';
 })
 
@@ -33,16 +32,27 @@ btnTxt.addEventListener('click', () => {
 panelAsideImg.style = 'display: inline';
 btnImg.addEventListener('click', () => {
   panelAsideImg.style = 'display: inline';
-  panelAsideTexto.style = 'display: none';
+  panelAsideTxt.style = 'display: none';
 })
 
 //Boton close aside
-const btnAside = document.querySelector('.close-aside');
-const panelAsideImagen =document.getElementById('panelAsideImg');
-btnAside.addEventListener('click', () => {
-  panelAsideTexto.style.display = 'none';
-  panelAsideImagen.style.display ='none';
+const btnAsideTxt = document.getElementById('close-aside-txt');
+// const panelAsideImagen =document.getElementById('panelAsideImg');
+btnAsideTxt.addEventListener('click', () => {
+  panelAsideTxt.style.display = 'none';
+  panelAsideImg.style.display ='none';
 })
+const btnAsideImg = document.getElementById('close-aside-img');
+// const panelAsideImagen =document.getElementById('panel-aside-img');
+// const panelAsideTxt = document.getElementById('panel-aside-txt');
+btnAsideImg.addEventListener('click', () => {
+  panelAsideTxt.style.display = 'none';
+  panelAsideImg.style.display ='none';
+})
+
+
+
+
 //CAMBIA TEXTO SUPERIOR
 const escribirSup = document.getElementById('txtSup');
 const topText = document.getElementById('topText');
@@ -258,4 +268,5 @@ resetFilter.addEventListener('click', () => {
   negativo.value = 0;
   valores();
 })
+
 
