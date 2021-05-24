@@ -14,10 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fredericka+the+Great&display=swap"
-        rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
         integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -27,16 +24,9 @@
 </head>
 
 <body class="dark">
-    <header class="head">
+    <header>
         <h1 class="app-name" id="appName">Generador de Memes</h1>
         <!---------------BUTTONS----------------------------->
-        <!---------------BUTTONS----------------------------->
-        <!---------------BUTTONS----------------------------->
-        <!--a los botones de texto e imagen les puse dos clases.
-pero a ls botones de dark appearance y light appearance
-les di tambien las clases btn-appearance btn-dark-appearance
-y btn-appearance btn-light-appearance para cuando 
-tengamos que hacer el tema oscuro y claro -->
         <div class="btns-container" id="btnsContainer">
             <button aria-label="boton de imagen" class="buttons btn" id="btnImg">
                 <i class="icon-size far fa-file-image"></i>Imagen
@@ -44,7 +34,8 @@ tengamos que hacer el tema oscuro y claro -->
             <button aria-label="boton de texto" class="buttons btn" id="btnTxt">
                 <i class="icon-size fas fa-font"></i> Texto
             </button>
-            <button aria-label="boton de apariencia claro-oscuro" class="buttons btn btn-appearance btn-dark-appearance" id="buttonDarkAppearance">
+            <button aria-label="boton de apariencia claro-oscuro" class="buttons btn btn-appearance btn-dark-appearance"
+                id="buttonDarkAppearance">
                 <i class="icon-size fas fa-lightbulb"></i><span id="textTheme"> Modo Claro</span>
             </button>
             <!-- este boton va oculto por eso esta comentado-->
@@ -54,23 +45,26 @@ tengamos que hacer el tema oscuro y claro -->
         <main>
             <div title="container" class="editor-content" id="editorContent">
                 <p title="texto superior" id="topText" class="top-bottom-text txt-espaciado">TOP TEXT</p>
-                <div title= "imagen del meme" id="imgMeme" class="img-meme"></div>
+                <div title="imagen del meme" id="imgMeme" class="img-meme"></div>
                 <p tittle="texto inferior" id="bottomText" class="top-bottom-text txt-espaciado">BOTTOM TEXT</p>
             </div>
         </main>
-        <button aria-label="descarga" id="btnDownload">Descargar</button>
+        <button aria-label="descarga" class="descarga" id="btnDownload"><i
+                class="fas fa-download icon-size"></i>Descargar Meme</button>
         <!-- ASIDE imagen -->
         <!-- ASIDE imagen -->
         <section class="aside img-aside panel-aside" id="panel-aside-img">
             <aside title="aside de imagen" class="aside-img" id="asideImg">
-                <button aria-label="cerrar la aside de imagen"  class="close-aside" id="close-aside-img"><i class="far fa-times-circle"></i>
+                <button aria-label="cerrar la aside de imagen" class="close-aside" id="close-aside-img"><i
+                        class="far fa-times-circle"></i>
                 </button>
                 <h2 class="panel-title">IMAGEN</h2>
                 <!-------- url  ----------->
                 <!-------- url  ----------->
                 <div class="panels">
                     <h3 class="div-title">URL</h3>
-                    <input title="descarga imagen" class="input input-url" type="text" id="imgUrl" placeholder="Ingresar URL" />
+                    <input title="descarga imagen" class="input input-url" type="text" id="imgUrl"
+                        placeholder="Ingresar URL" />
                 </div>
                 <!---- fondo  ---------->
                 <!---- fondo  ---------->
@@ -78,8 +72,9 @@ tengamos que hacer el tema oscuro y claro -->
                     <div class="div-fondo-color">
                         <h3 class="div-title">FONDO</h3>
                         <div id="colorBlend">
-                            <input title="color fondo meme"class="input input-fondo-color" type="color" id="colorFondo" value="#FFFFFF" />
-                            <label for= "backgroundColorImagen" id="backgroundColorImg">#FFFFFF</label>
+                            <input title="color fondo meme" class="input input-fondo-color" type="color" id="colorFondo"
+                                value="#FFFFFF" />
+                            <label for="backgroundColorImagen" id="backgroundColorImg">#FFFFFF</label>
                         </div>
                         <div>
                             <select title="diferentes filtros para fondo meme" name="" id="imgBackgroundFilter">
@@ -133,8 +128,9 @@ tengamos que hacer el tema oscuro y claro -->
         <!-- ASIDE txt -->
         <!-- ASIDE txt -->
         <section class="aside txt-aside panel-aside" id="panel-aside-txt">
-            <aside title="aside de texto"class="aside-txt" id="asideTxt">
-                <button aria-label="cerrar aside de texto"  class="close-aside"id="close-aside-txt" ><i class="far fa-times-circle"></i>
+            <aside title="aside de texto" class="aside-txt" id="asideTxt">
+                <button aria-label="cerrar aside de texto" class="close-aside" id="close-aside-txt"><i
+                        class="far fa-times-circle"></i>
                 </button>
                 <h2 class="panel-title">TEXTO</h2>
                 <div class="panels">
@@ -143,7 +139,7 @@ tengamos que hacer el tema oscuro y claro -->
                     <textarea id="txtSup" cols="22" rows="1" maxlength="100">
             </textarea>
                     <div>
-                        <input title="para sacar texto superior"id="sinTextoSuperior" type="checkbox" value="check" />
+                        <input title="para sacar texto superior" id="sinTextoSuperior" type="checkbox" value="check" />
                         <label for="sinTextoSuperior">Sin texto superior</label>
                     </div>
                 </div>
@@ -153,7 +149,7 @@ tengamos que hacer el tema oscuro y claro -->
                     <textarea id="txtInf" cols="22" rows="1" maxlength="1000">
             </textarea>
                     <div>
-                        <input  title="sacar texto inferior" id="sinTextoInferior" type="checkbox" value="check" />
+                        <input title="sacar texto inferior" id="sinTextoInferior" type="checkbox" value="check" />
                         <label for="sinTextoInferior">Sin texto inferior</label>
                     </div>
                 </div>
@@ -172,19 +168,19 @@ tengamos que hacer el tema oscuro y claro -->
                             <option value="Times New Roman">Times New Roman</option>
                         </select>
                         <!-- <input class="las-fuentes" type="text" id="lasFuentesUrl" placeholder="aca van alas fuentes"> -->
-                        <div title="tamaño,alineacion, fuente de texto"class="size-align-font-txt">
+                        <div title="tamaño,alineacion, fuente de texto" class="size-align-font-txt">
                             <div>
-                                <input title="tamaño de fuente"class="input fuentes-size" type="number" id="fuentesSizeUrl" min="10" max="50"
-                                    value="40" />
+                                <input title="tamaño de fuente" class="input fuentes-size" type="number"
+                                    id="fuentesSizeUrl" min="10" max="50" value="40" />
                             </div>
                             <div title="alineacion del texto" class="align-btns">
-                                <button aria-label="alineacion izquierda"class="btn-txt-align-icon">
+                                <button aria-label="alineacion izquierda" class="btn-txt-align-icon">
                                     <i class="fas fa-align-left" id="alineacionIzq"></i>
                                 </button>
-                                <button aria-label="alineacion centrada"class="btn-txt-align-icon">
+                                <button aria-label="alineacion centrada" class="btn-txt-align-icon">
                                     <i class="fas fa-align-center" id="alineacionCentro"></i>
                                 </button>
-                                <button aria-label="alineacion derecha"lass="btn-txt-align-icon">
+                                <button aria-label="alineacion derecha" lass="btn-txt-align-icon">
                                     <i class="fas fa-align-right" id="alineacionDer"></i>
                                 </button>
                             </div>
@@ -199,7 +195,8 @@ tengamos que hacer el tema oscuro y claro -->
                             </div>
                             <div>
                                 <h3 class="div-title">FONDO</h3>
-                                <input  title="color fondo fuente" class="input fuentes-fondo" type="color" id="fondoFuente">
+                                <input title="color fondo fuente" class="input fuentes-fondo" type="color"
+                                    id="fondoFuente">
                                 <label for="codigoBackgroundColor" id="codColorBackground">#000000</label>
                             </div>
                         </div>
@@ -210,8 +207,8 @@ tengamos que hacer el tema oscuro y claro -->
                     </div>
                     <div class="panels">
                         <h3 class="div-title">CONTORNO</h3>
-                        <div title="botones de contorno "class="btns-contorno">
-                            <button  aria-label="sin contorno" id="btnNoneContorno">Ninguno</button>
+                        <div title="botones de contorno " class="btns-contorno">
+                            <button aria-label="sin contorno" id="btnNoneContorno">Ninguno</button>
                             <button aria label="contorno claro" id="btnLightContorno">Claro</button>
                             <button aria-label="contorno oscuro" id="btnDarkContorno">Oscuro</button>
                         </div>
@@ -219,7 +216,8 @@ tengamos que hacer el tema oscuro y claro -->
                     <div class="panels">
                         <h3 class="div-title">ESPACIADO</h3>
                         <label for="espaciado"></label>
-                        <input title="espaciar texto"class="input fuentes-size" type="number" id="txtEspaciado" min="10" max="50" value="35" />
+                        <input title="espaciar texto" class="input fuentes-size" type="number" id="txtEspaciado"
+                            min="10" max="50" value="35" />
                     </div>
                     <div class="panels">
                         <h3 class="div-title">INTERLINEADO</h3>

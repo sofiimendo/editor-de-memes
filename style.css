@@ -48,6 +48,7 @@ body{
 }
 .panel-aside {
     font-size: 13px;
+    display: unset;
 }
 .panels {
     margin-bottom: 7%;
@@ -64,11 +65,17 @@ body{
 .close-aside{
     display: none;
 }
+
 @media (min-width: 320px) and (max-width: 700px){
     .close-aside{
         display: block;
     }
     .aside{
         width: 100%;
+        display: none;
+
+    }
+    .panel-aside {
+        display: none;
     }
 }

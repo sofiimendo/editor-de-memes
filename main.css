@@ -46,6 +46,27 @@
     background-repeat: no-repeat;
     object-fit: fill;
 }
+.descarga {
+    background-color: rgb(70, 133, 73);
+    color: var(--color);
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2%;
+    font-size: 14px;
+    width: 160px;
+    height: 60px;
+    border-radius: 5px;
+}
+.descarga:hover {
+    background-color:rgb(45, 83, 47);
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+
+
 @media (min-width: 320px) and (max-width: 700px){
     .editor-content{
         height: 300px;
