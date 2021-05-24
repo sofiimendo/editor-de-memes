@@ -51,8 +51,6 @@ btnAsideImg.addEventListener('click', () => {
 })
 
 
-
-
 //CAMBIA TEXTO SUPERIOR
 const escribirSup = document.getElementById('txtSup');
 const topText = document.getElementById('topText');
