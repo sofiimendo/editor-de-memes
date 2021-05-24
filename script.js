@@ -35,7 +35,7 @@ btnImg.addEventListener('click', () => {
   panelAsideTxt.style = 'display: none';
 })
 
-//Boton close aside
+//BOTON CLOSE ASIDE
 const btnAsideTxt = document.getElementById('close-aside-txt');
 // const panelAsideImagen =document.getElementById('panelAsideImg');
 btnAsideTxt.addEventListener('click', () => {
@@ -127,16 +127,16 @@ const cambiarTexto = () => {
 escribirSup.addEventListener('input', cambiarTexto)
 escribirInf.addEventListener('input', cambiarTexto)
 
-//Cambia color y codigo de color segun el color elegido
-const cambiarColorTexto = document.getElementById('colorfuente');
+//CAMBIA COLOR Y CODIGO DEL COLOR, SEGUN EL CODIGO ELEGIDO
+const cambiarColorTexto = document.getElementById('colorFuente');
 const cambiarCodigoTexto = document.getElementById('codColorText');
-cambiarCodigoTexto.addEventListener('input', () => {
-  topText.style.backgroundColor = `${cambiarCodigoTexto.value}`;
-  bottomText.style.background = `${cambiarCodigoTexto.value}`;
-  cambiarCodigoFondo.innerText = cambiarCodigoTexto.value.toUpperCase();
+cambiarColorTexto.addEventListener('input', () => {
+  topText.style.color = `${cambiarColorTexto.value}`;
+  bottomText.style.color = `${cambiarColorTexto.value}`;
+  cambiarCodigoTexto.innerText = cambiarColorTexto.value.toUpperCase();
 })
 
-//Cambia fondo y codigo de color segun el color elegido
+//CAMBIA FONDO Y CODIGO DEL COLOR DEL FONDO, SEGUN EL CODIGO ELEGIDO
 const cambiarColorFondo = document.getElementById('fondoFuente');
 const cambiarCodigoFondo = document.getElementById('codColorBackground');
 cambiarColorFondo.addEventListener('input', () => {
@@ -145,7 +145,7 @@ cambiarColorFondo.addEventListener('input', () => {
   cambiarCodigoFondo.innerText = cambiarColorFondo.value.toUpperCase();
 })
 
-//Fondo transparente
+//FONDO TRANSPARENTE
 const transparentCheckBox = document.getElementById('fondoTransparente');
 const ponerFondoTransparente = () => {
   topText.classList.toggle('fondoTransparenteTop');
@@ -160,18 +160,18 @@ const btnLightContorno = document.getElementById('btnLightContorno')
 
 const cambiarContorno = (event) => {
   if (event.target === btnNoneContorno) {
-    topText.classList.remove('light-stroke', 'dark-stroke');
-    bottomText.classList.remove('light-stroke', 'dark-stroke');
+    topText.classList.remove('trazo-claro', 'trazo-oscuro');
+    bottomText.classList.remove('trazo-claro', 'trazo-oscuro');
   } else if (event.target === btnDarkContorno) {
-    topText.classList.remove('light-stroke', 'stroke-none');
-    bottomText.classList.remove('light-stroke', 'stroke-none');
-    topText.classList.add('dark-stroke');
-    bottomText.classList.add('dark-stroke');
+    topText.classList.remove('trazo-claro', 'sin-trazo');
+    bottomText.classList.remove('trazo-claro', 'sin-trazo');
+    topText.classList.add('trazo-oscuro');
+    bottomText.classList.add('trazo-oscuro');
   } else if (event.target === btnLightContorno) {
-    topText.classList.remove('dark-stroke', 'stroke-none');
-    bottomText.classList.remove('dark-stroke', 'stroke-none');
-    topText.classList.add('light-stroke');
-    bottomText.classList.add('light-stroke');
+    topText.classList.remove('trazo-oscuro', 'sin-trazo');
+    bottomText.classList.remove('trazo-oscuro', 'sin-trazo');
+    topText.classList.add('trazo-claro');
+    bottomText.classList.add('trazo-claro');
   }
 }
 btnNoneContorno.addEventListener('click', cambiarContorno);
