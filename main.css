@@ -46,3 +46,12 @@
     background-repeat: no-repeat;
     object-fit: fill;
 }
+@media (min-width: 320px) and (max-width: 700px){
+    .editor-content{
+        height: 300px;
+        width: 300px;
+    }
+    .top-bottom-text {
+        font-size: 20px;
+    }
+}
