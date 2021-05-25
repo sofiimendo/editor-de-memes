@@ -23,7 +23,6 @@ body.light {
 body {
     background-color: var(--color-background);
     font-family: 'Open Sans', sans-serif;
-
 }
 
 .aside {
@@ -65,7 +64,6 @@ body {
     border: none;
     border-radius: 2px;
     margin-bottom: 0.2px;
-
 }
 
 /*input[type="color"] {*/
@@ -121,7 +119,6 @@ input[type="color"]::-webkit-color-swatch {
     transition: 0.2s;
     padding: 5px 10px;
     margin-bottom: 5px;
-
     
 }
 
@@ -141,10 +138,21 @@ input[type="color"]::-webkit-color-swatch {
     .aside {
         width: 100%;
         display: none;
-
     }
-
+    .panel-title {
+        font-size: 15px;
+    }
+    
+    .panel-aside {
+        font-size: 10px;
+        display: unset;
+    }
     .panel-aside {
         display: none;
+        font-size: 10px;
     }
+    .input{
+        width: 100%;
+    }
+
 }

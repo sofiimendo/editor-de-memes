@@ -28,7 +28,7 @@
 }
 
 input[type=range] {
-    height: 21px;
+    height: 15px;
     -webkit-appearance: none;
     margin: 2%;
     width: 100%;
@@ -43,7 +43,6 @@ input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 5px;
     cursor: pointer;
-    animate: 0.2s;
     box-shadow: 0px 0px 4px #000000;
     background: #FFFEFC;
     border-radius: 7px;
@@ -70,7 +69,6 @@ input[type=range]::-moz-range-track {
     width: 100%;
     height: 5px;
     cursor: pointer;
-    animate: 0.2s;
     box-shadow: 0px 0px 4px #000000;
     background: #FFFEFC;
     border-radius: 7px;
@@ -83,7 +81,6 @@ input[type=range]::-moz-range-thumb {
     height: 10px;
     width: 10px;
     border-radius: 5px;
-
     cursor: pointer;
 }
 
@@ -91,21 +88,18 @@ input[type=range]::-ms-track {
     width: 100%;
     height: 5px;
     cursor: pointer;
-    animate: 0.2s;
     background: transparent;
     border-color: transparent;
     color: transparent;
 }
 
 input[type=range]::-ms-fill-lower {
-
     border: 1px solid #000000;
     border-radius: 14px;
     box-shadow: 0px 0px 4px #000000;
 }
 
 input[type=range]::-ms-fill-upper {
-
     border: 1px solid #000000;
     border-radius: 14px;
     box-shadow: 0px 0px 4px #000000;
@@ -118,11 +112,8 @@ input[type=range]::-ms-thumb {
     height: 10px;
     width: 10px;
     border-radius: 5px;
-
     cursor: pointer;
 }
-
-
 
 .restablecer-filtros {
     border: none;
@@ -132,8 +123,20 @@ input[type=range]::-ms-thumb {
     padding: 2%;
     width: 140px;
     font-size: 15px;
+    margin-bottom: 5%;
 }
 
 .restablecer-filtros:hover {
     background-color: var(--color-header);
+}
+
+@media (min-width: 320px) and (max-width: 700px) {
+    input[type=range]{
+        height: 0;
+        width: 380px;
+    }
+    .restablecer-filtros{
+        padding: 0;
+        font-size: 13px;
+    }
 }
