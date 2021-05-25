@@ -28,3 +28,6 @@ background-color: transparent;
 .size-align-font-txt{
   display:flex
 }
+.color-fondo{
+flex-direction: column;
+}
