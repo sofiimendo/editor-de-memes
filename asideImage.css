@@ -130,12 +130,18 @@ input[type=range]::-ms-thumb {
     background-color: var(--color-header);
 }
 
+.fondo-color-shape {
+    border-radius: 4px;
+    background-color: cadetblue;
+}
+
 @media (min-width: 320px) and (max-width: 700px) {
-    input[type=range]{
+    input[type=range] {
         height: 0;
         width: 380px;
     }
-    .restablecer-filtros{
+
+    .restablecer-filtros {
         padding: 0;
         font-size: 13px;
     }

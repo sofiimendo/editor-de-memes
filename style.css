@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -55,7 +54,9 @@ body {
     margin-bottom: 7%;
 }
 
+
 /*LA CLASE panel-aside LA USE PERO NO LA ESTILER PORQUE CREO QUE SLO LA USARE PARA HACER EL LIGHT/DARK APPEARANCE*/
+
 .input {
     color: var(--color);
     background-color: var(--color-background);
@@ -70,7 +71,9 @@ body {
     padding: 5px;
 }
 
+
 /*input[type="color"] {*/
+
 input[type="color"] {
     -webkit-appearance: none;
     border: none;
@@ -106,7 +109,7 @@ input[type="color"]::-webkit-color-swatch {
     align-items: center;
     padding: 5px;
     height: 40px;
-
+    border-radius: 4px;
 }
 
 #backgroundColorImg {
@@ -123,7 +126,7 @@ input[type="color"]::-webkit-color-swatch {
     transition: 0.2s;
     padding: 5px 10px;
     margin-bottom: 5px;
-
+    border-radius: 4px;
 }
 
 .div-title {
@@ -155,17 +158,16 @@ input[type="color"]::-webkit-color-swatch {
     height: 34px;
 }
 
-
-.inputXSmall{
-  background-color: var(--color-background);
-  width: 30px;
-  height: 34px;
-  border: none;
-  border-radius: 2px;
-  margin-right: 4px;
-  align-items: center;
-  padding-top: 10px;
-  }
+.inputXSmall {
+    background-color: var(--color-background);
+    width: 30px;
+    height: 34px;
+    border: none;
+    border-radius: 2px;
+    margin-right: 4px;
+    align-items: center;
+    padding-top: 10px;
+}
 
 section {
     display: unset;
@@ -186,98 +188,81 @@ section {
     margin-right: 5px;
     padding: 3%;
 }
-.panelColor{
-  display:flex;
-  flex-direction: column;
-}
-.color-fondo{
-  display: flex;
-  justify-content: space-between;
 
+.panelColor {
+    display: flex;
+    flex-direction: column;
+}
+
+.color-fondo {
+    display: flex;
+    justify-content: space-between;
 }
 
 @media (min-width: 320px) and (max-width: 700px) {
     .close-aside {
         display: block;
     }
-
     .aside {
         width: 100%;
         display: none;
-        padding-left: 5%;
-        padding-right: 5%;
     }
-
     .panel-title {
         font-size: 15px;
     }
-
     .panel-aside {
         font-size: 10px;
         display: unset;
     }
-
     .panel-aside {
         display: none;
         font-size: 10px;
     }
-
-    .input {
-        width: 100%;
-    }
-
     section {
         display: none
     }
     .input {
-      color: var(--color);
-      background-color: var(--color-background);
-      width: 100%;
-      height: 34px;
-      border: none;
-      border-radius: 2px;
-      margin-bottom: 0.2px;
-      border-radius: 4px;
-      margin-bottom: 0.2px;
-      font-size: 16px;
-      padding: 5px;
-      } 
-
-      .inputSmall {
-        background-color: var(--color-background);
         color: var(--color);
-        width: 180px; 
+        background-color: var(--color-background);
+        width: 100%;
         height: 34px;
         border: none;
         border-radius: 2px;
         margin-bottom: 0.2px;
-        padding:5%;
-        display:flex;
+        border-radius: 4px;
+        margin-bottom: 0.2px;
+        font-size: 16px;
+        padding: 5px;
+    }
+    .inputSmall {
+        background-color: var(--color-background);
+        color: var(--color);
+        width: 180px;
+        height: 34px;
+        border: none;
+        border-radius: 2px;
+        margin-bottom: 0.2px;
+        padding: 5%;
+        display: flex;
         justify-content: flex-start;
-        }
-
-
-      .fondo-color{
-      display:flex;
-      flex-grow:2;
     }
-
-    .color-blend{
-      width: 170px;
+    .fondo-color {
+        display: flex;
+        flex-grow: 2;
     }
-
-    .inputXSmall{
-      width: 60px;
-      height: 34px;
-      border: none;
-      border-radius: 2px;
-      margin-right: 4px;
-      align-items: center;
-      padding-top: 10px;
-      }
-    
-
-
+    .color-blend {
+        width: 170px;
     }
+    .inputXSmall {
+        width: 60px;
+        height: 34px;
+        border: none;
+        border-radius: 2px;
+        margin-right: 4px;
+        align-items: center;
+        padding-top: 10px;
+    }
+}
 
-    
+
+}
