@@ -175,13 +175,13 @@
                                     id="fuentesSizeUrl" min="10" max="50" value="40" />
                             </div>
                             <div title="alineacion del texto" class="align-btns">
-                                <button aria-label="alineacion izquierda" class="btn-txt-align-icon">
+                                <button aria-label="alineacion izquierda" class="btn-txt-align-icon align-btns">
                                     <i class="inputXSmall fas fa-align-left" id="alineacionIzq"></i>
                                 </button>
-                                <button aria-label="alineacion centrada" class="btn-txt-align-icon">
+                                <button aria-label="alineacion centrada" class="btn-txt-align-icon align-btns">
                                     <i class="inputXSmall fas fa-align-center" id="alineacionCentro"></i>
                                 </button>
-                                <button aria-label="alineacion derecha" class="btn-txt-align-icon">
+                                <button aria-label="alineacion derecha" class="btn-txt-align-icon align-btns ">
                                     <i class="inputXSmall fas fa-align-right" id="alineacionDer"></i>
                                 </button>
                             </div>
@@ -208,10 +208,10 @@
                     </div>
                     <div class="panels">
                         <h3 class="div-title">CONTORNO</h3>
-                        <div title="botones de contorno " class="btns-contorno">
-                            <button aria-label="sin contorno" id="btnNoneContorno">Ninguno</button>
-                            <button aria label="contorno claro" id="btnLightContorno">Claro</button>
-                            <button aria-label="contorno oscuro" id="btnDarkContorno">Oscuro</button>
+                        <!-- <div title="botones de contorno " class="btns-contorno"> -->
+                            <button class="btns-contorno"aria-label="sin contorno" id="btnNoneContorno">Ninguno</button>
+                            <button class="btns-contorno"aria label="contorno claro" id="btnLightContorno">Claro</button>
+                            <button class="btns-contorno"aria-label="contorno oscuro" id="btnDarkContorno">Oscuro</button>
                         </div>
                     </div>
                     <div class="panels">
@@ -222,8 +222,8 @@
                     </div>
                     <div class="panels">
                         <h3 class="div-title">INTERLINEADO</h3>
-                        <label for="interlineado"></label>
-                        <select id="interlineado">
+                        <label class="input" for="interlineado"></label>
+                        <select class="input"id="interlineado">
                             <option value="0.8">0.8</option>
                             <option value="1">1</option>
                             <option value="1.2">1.2</option>
