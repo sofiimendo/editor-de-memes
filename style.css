@@ -57,6 +57,7 @@ body {
 
 /*LA CLASE panel-aside LA USE PERO NO LA ESTILER PORQUE CREO QUE SLO LA USARE PARA HACER EL LIGHT/DARK APPEARANCE*/
 .input {
+    color: var(--color);
     background-color: var(--color-background);
     width: 230px;
     height: 34px;
@@ -105,6 +106,7 @@ input[type="color"]::-webkit-color-swatch {
     align-items: center;
     padding: 5px;
     height: 40px;
+    border-radius: 4px;
 
 }
 
@@ -122,7 +124,7 @@ input[type="color"]::-webkit-color-swatch {
     transition: 0.2s;
     padding: 5px 10px;
     margin-bottom: 5px;
-
+    border-radius: 4px;
 }
 
 .div-title {
@@ -185,6 +187,9 @@ section {
     padding: 3%;
 }
 
+textarea {
+    resize: vertical;
+}
 
 
 
