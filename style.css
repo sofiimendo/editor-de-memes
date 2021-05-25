@@ -155,15 +155,16 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 
-.inputXSmall {
-    background-color: var(--color-background);
-    width: 30px;
-    height: 34px;
-    border: none;
-    border-radius: 2px;
-    margin-right: 4px;
-    justify-content: space-between;
-}
+.inputXSmall{
+  background-color: var(--color-background);
+  width: 30px;
+  height: 34px;
+  border: none;
+  border-radius: 2px;
+  margin-right: 4px;
+  align-items: center;
+  padding-top: 10px;
+  }
 
 section {
     display: unset;
@@ -184,9 +185,15 @@ section {
     margin-right: 5px;
     padding: 3%;
 }
+.panelColor{
+  display:flex;
+  flex-direction: column;
+}
+.color-fondo{
+  display: flex;
+  justify-content: space-between;
 
-
-
+}
 
 @media (min-width: 320px) and (max-width: 700px) {
     .close-aside {
