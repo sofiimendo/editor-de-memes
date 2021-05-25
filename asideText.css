@@ -25,3 +25,6 @@ background-color: transparent;
 .sin-trazo{
   -webkit-text-stroke: none;
 }
+.size-align-font-txt{
+  display:flex
+}

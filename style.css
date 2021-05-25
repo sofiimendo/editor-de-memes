@@ -49,8 +49,7 @@ body {
 
 .panel-aside {
     font-size: 13px;
-    display: unset;
-}
+   }
 
 .panels {
     margin-bottom: 7%;
@@ -93,7 +92,7 @@ input[type="color"]::-webkit-color-swatch {
     width: 100%;
 }
 
-#colorBlend {
+.color-blend {
     border-radius: var(--color-background);
     background-color: var(--color-background);
     color: var(--color);
@@ -130,6 +129,42 @@ input[type="color"]::-webkit-color-swatch {
     display: none;
 }
 
+.inputSmall{
+  background-color: var(--color-background);
+  width: 112px;
+  height: 34px;
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 0.2px;
+  margin-right: 5px;
+}
+.align-btns{
+  display:flex;
+  justify-content:space-between
+}
+
+
+.inputXSmall{
+  background-color: var(--color-background);
+  width: 30px;
+  height: 34px;
+  border: none;
+  border-radius: 2px;
+  margin-right: 3px;
+  }
+
+  section{
+ display: unset;
+  }
+ 
+.color-fondo{
+  display:flex;
+  justify-content: space-between;
+}
+
+
+
+
 @media (min-width: 320px) and (max-width: 700px) {
     .close-aside {
         display: block;
@@ -154,5 +189,10 @@ input[type="color"]::-webkit-color-swatch {
     .input{
         width: 100%;
     }
+    section{
+      display:none
+    }
+    /* .responsiveAside{
+      display:none */
 
-}
+    } 
