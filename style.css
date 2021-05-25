@@ -164,7 +164,8 @@ input[type="color"]::-webkit-color-swatch {
     border: none;
     border-radius: 2px;
     margin-right: 4px;
-    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
 }
 
 section {
@@ -187,45 +188,55 @@ section {
     padding: 3%;
 }
 
-textarea {
-    resize: vertical;
+.panelColor {
+    display: flex;
+    flex-direction: column;
 }
 
+.color-fondo {
+    display: flex;
+    justify-content: space-between;
+
+    /*textarea {
+    resize: vertical;
+}
+*/
 
 
-@media (min-width: 320px) and (max-width: 700px) {
-    .close-aside {
-        display: block;
-    }
+    @media (min-width: 320px) and (max-width: 700px) {
+        .close-aside {
+            display: block;
+        }
 
-    .aside {
-        width: 100%;
-        display: none;
-    }
+        .aside {
+            width: 100%;
+            display: none;
+        }
 
-    .panel-title {
-        font-size: 15px;
-    }
+        .panel-title {
+            font-size: 15px;
+        }
 
-    .panel-aside {
-        font-size: 10px;
-        display: unset;
-    }
+        .panel-aside {
+            font-size: 10px;
+            display: unset;
+        }
 
-    .panel-aside {
-        display: none;
-        font-size: 10px;
-    }
+        .panel-aside {
+            display: none;
+            font-size: 10px;
+        }
 
-    .input {
-        width: 100%;
-    }
+        .input {
+            width: 100%;
+        }
 
-    section {
-        display: none
-    }
+        section {
+            display: none
+        }
 
-    /* .responsiveAside{
+        /* .responsiveAside{
       display:none */
 
+    }
 }
