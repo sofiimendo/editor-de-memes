@@ -157,7 +157,8 @@ input[type="color"]::-webkit-color-swatch {
   border: none;
   border-radius: 2px;
   margin-right: 4px;
-  justify-content: space-between; 
+  align-items: center;
+  padding-top: 10px;
   }
 
   section{
@@ -178,9 +179,15 @@ input[type="color"]::-webkit-color-swatch {
   margin-right: 5px;
   padding: 3%;
 }
+.panelColor{
+  display:flex;
+  flex-direction: column;
+}
+.color-fondo{
+  display: flex;
+  justify-content: space-between;
 
-
-
+}
 
 @media (min-width: 320px) and (max-width: 700px) {
     .close-aside {
