@@ -47,7 +47,7 @@
     object-fit: fill;
 }
 .descarga {
-    background-color: rgb(70, 133, 73);
+    background-color: rgb(46,125,50);
     color: var(--color);
     font-weight: bolder;
     display: flex;

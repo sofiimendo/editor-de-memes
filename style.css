@@ -7,16 +7,16 @@
 }
 
 body.dark {
-    --color-aside: #4a4a4a;
-    --color-header: rgb(50, 50, 50);
-    --color-background: rgb(70, 70, 70);
+    --color-header: rgb(25,30,43);
+    --color-aside: rgb(24,29,42);
+    --color-background: rgb(48,52,63);
     --color: rgb(255, 255, 255);
 }
 
 body.light {
-    --color-aside: rgb(200, 200, 200);
-    --color-header: rgb(250, 250, 250);
-    --color-background: rgb(235, 228, 228);
+    --color-aside: rgb(250,250,250);
+    --color-header: rgb(224,224,224);
+    --color-background: rgb(238,238,238);
     --color: rgb(20, 20, 20);
 }
 
@@ -39,7 +39,7 @@ body {
     z-index: 10;
     padding: 1%;
     padding-top: 3%;
-    color: rgb(225, 225, 225)
+    color: var(--color);
 }
 
 .panel-title {
@@ -59,39 +59,70 @@ body {
 
 /*LA CLASE panel-aside LA USE PERO NO LA ESTILER PORQUE CREO QUE SLO LA USARE PARA HACER EL LIGHT/DARK APPEARANCE*/
 .input {
+    background-color: var(--color-background);
     width: 230px;
     height: 34px;
-    border: 1px solid white;
+    border: none;
     border-radius: 2px;
     margin-bottom: 0.2px;
+
 }
 
 /*input[type="color"] {*/
-    input[type="color"] {
-        -webkit-appearance: none;
-        border: none;
-        width: 32px;
-        height: 32px;
-        background-color: transparent;
-    }
-    input[type="color"]::-webkit-color-swatch-wrapper {
-        padding: 0;
-    }
-    input[type="color"]::-webkit-color-swatch {
-        border: none;
-        border-radius: 50%;
-    }
+input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 33px;
+    height: 24px;
+    background-color: transparent;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
 .fondo-color {
     display: flex;
+    justify-content: space-between;
 }
+
 .input-fondo-color {
     width: 100%;
 }
+
 #colorBlend {
+    border-radius: var(--color-background);
+    background-color: var(--color-background);
+    color: var(--color);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px;
+    height: 40px;
+
+}
+
+#backgroundColorImg {
+    margin: 5%;
+}
+
+#imgBackgroundFilter {
+    color: var(--color);
+    width: 100%;
+    height: 40px;
+    background-color: var(--color-background);
+    border-radius: var(--color-background);
+    border: none;
+    transition: 0.2s;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+
+    
 }
 
 .div-title {
