@@ -1,5 +1,6 @@
 .img-aside {
     right: 0;
+    padding: 15px;
 }
 
 .div-fondo-color {
@@ -25,6 +26,9 @@
 .filtros {
     display: flex;
     flex-direction: column;
+}
+.input-range-filters {
+    margin-top: 10px;
 }
 
 input[type=range] {
