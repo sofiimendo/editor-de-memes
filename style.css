@@ -7,16 +7,16 @@
 }
 
 body.dark {
-    --color-header: rgb(25,30,43);
-    --color-aside: rgb(24,29,42);
-    --color-background: rgb(48,52,63);
+    --color-header: rgb(25, 30, 43);
+    --color-aside: rgb(24, 29, 42);
+    --color-background: rgb(48, 52, 63);
     --color: rgb(255, 255, 255);
 }
 
 body.light {
-    --color-aside: rgb(250,250,250);
-    --color-header: rgb(224,224,224);
-    --color-background: rgb(238,238,238);
+    --color-aside: rgb(250, 250, 250);
+    --color-header: rgb(224, 224, 224);
+    --color-background: rgb(238, 238, 238);
     --color: rgb(20, 20, 20);
 }
 
@@ -38,6 +38,7 @@ body {
     z-index: 10;
     padding: 1%;
     padding-top: 3%;
+    overflow: auto;
     color: var(--color);
 }
 
@@ -49,10 +50,12 @@ body {
 
 .panel-aside {
     font-size: 13px;
-   }
+}
 
 .panels {
     margin-bottom: 7%;
+    display: flex;
+    flex-direction: column;
 }
 
 /*LA CLASE panel-aside LA USE PERO NO LA ESTILER PORQUE CREO QUE SLO LA USARE PARA HACER EL LIGHT/DARK APPEARANCE*/
@@ -97,11 +100,10 @@ input[type="color"]::-webkit-color-swatch {
     background-color: var(--color-background);
     color: var(--color);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 5px;
     height: 40px;
-
 }
 
 #backgroundColorImg {
@@ -118,7 +120,7 @@ input[type="color"]::-webkit-color-swatch {
     transition: 0.2s;
     padding: 5px 10px;
     margin-bottom: 5px;
-    
+
 }
 
 .div-title {
@@ -129,43 +131,44 @@ input[type="color"]::-webkit-color-swatch {
     display: none;
 }
 
-.inputSmall{
-  background-color: var(--color-background);
-  width: 112px;
-  height: 34px;
-  border: none;
-  border-radius: 2px;
-  margin-bottom: 0.2px;
-  margin-right: 5px;
-}
-.align-btns{
-  display:flex;
-  justify-content:space-between
+.inputSmall {
+    background-color: var(--color-background);
+    width: 112px;
+    height: 34px;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 0.2px;
+    margin-right: 5px;
 }
 
-
-.inputXSmall{
-  background-color: var(--color-background);
-  width: 30px;
-  height: 34px;
-  border: none;
-  border-radius: 2px;
-  margin-right: 3px;
-  }
-
-  section{
- display: unset;
-  }
- 
-.color-fondo{
-  display:flex;
-  justify-content: space-between;
+.align-btns {
+    display: flex;
+    justify-content: space-between
 }
 
+.inputXSmall {
+    background-color: var(--color-background);
+    width: 30px;
+    height: 34px;
+    border: none;
+    border-radius: 2px;
+    margin-right: 3px;
+}
 
+section {
+    display: unset;
+}
 
+.color-fondo {
+    display: flex;
+    justify-content: space-between;
+}
 
 @media (min-width: 320px) and (max-width: 700px) {
+    section {
+        display: none
+    }
+
     .close-aside {
         display: block;
     }
@@ -174,25 +177,16 @@ input[type="color"]::-webkit-color-swatch {
         width: 100%;
         display: none;
     }
-    .panel-title {
-        font-size: 15px;
-    }
-    
+
     .panel-aside {
-        font-size: 10px;
         display: unset;
     }
+
     .panel-aside {
         display: none;
-        font-size: 10px;
     }
-    .input{
+
+    .input {
         width: 100%;
     }
-    section{
-      display:none
-    }
-    /* .responsiveAside{
-      display:none */
-
-    } 
+}
