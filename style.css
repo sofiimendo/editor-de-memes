@@ -38,6 +38,7 @@ body {
     z-index: 10;
     padding: 1%;
     padding-top: 3%;
+    overflow: auto;
     color: var(--color);
 }
 
@@ -53,6 +54,8 @@ body {
 
 .panels {
     margin-bottom: 7%;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -106,7 +109,7 @@ input[type="color"]::-webkit-color-swatch {
     background-color: var(--color-background);
     color: var(--color);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 5px;
     height: 40px;
@@ -131,7 +134,7 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .div-title {
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 }
 
 .close-aside {
@@ -140,23 +143,17 @@ input[type="color"]::-webkit-color-swatch {
 
 .inputSmall {
     background-color: var(--color-background);
-    color: var(--color);
-    width: 112px;
+    width: 77px;
     height: 34px;
     border: none;
     border-radius: 2px;
-    margin-bottom: 0.2px;
-    margin-right: 5px;
+    padding: 2%;
 }
 
 .align-btns {
     display: flex;
     justify-content: space-between;
-    margin-left: 3px;
-    align-items: center;
-    border: none;
-    padding-top: 2px;
-    height: 34px;
+    margin-top: 2%;
 }
 
 .inputXSmall {
@@ -203,6 +200,10 @@ section {
     
 
 @media (min-width: 320px) and (max-width: 700px) {
+    section {
+        display: none
+    }
+
     .close-aside {
         display: block;
         float: right;
@@ -212,7 +213,7 @@ section {
         color: var(--color);
         background-color: var(--color-aside);
     }
-Fuente: https://www.iteramos.com/pregunta/58780/coloca-un-boton-alineado-a-la-derecha
+/*Fuente: https://www.iteramos.com/pregunta/58780/coloca-un-boton-alineado-a-la-derecha*/
     }
     .aside {
         width: 100%;
@@ -222,12 +223,11 @@ Fuente: https://www.iteramos.com/pregunta/58780/coloca-un-boton-alineado-a-la-de
         font-size: 15px;
     }
     .panel-aside {
-        font-size: 10px;
         display: unset;
     }
+
     .panel-aside {
         display: none;
-        font-size: 10px;
     }
     section {
         display: none
@@ -273,6 +273,6 @@ Fuente: https://www.iteramos.com/pregunta/58780/coloca-un-boton-alineado-a-la-de
         align-items: center;
         padding-top: 10px;
     }
-}
+
 
 
