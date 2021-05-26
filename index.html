@@ -77,7 +77,8 @@
                         <label for="backgroundColorImagen" id="backgroundColorImg">#FFFFFF</label>
                     </div>
                     <div>
-                        <select title="diferentes filtros para fondo meme" name="" id="imgBackgroundFilter">
+                        <select class="color-blend" title="diferentes filtros para fondo meme" name=""
+                            id="imgBackgroundFilter">
                             <option value="unset">Ninguno</option>
                             <option value="lighten">Aclarar</option>
                             <option value="darken">Oscurecer</option>
@@ -87,6 +88,7 @@
                         </select>
                     </div>
                 </div>
+            </div>
             </div>
             <!-------  filtros  ---------->
             <!-------  filtros  ---------->
@@ -137,7 +139,23 @@
             <div class="panels">
                 <h3 class="div-title">SUPERIOR</h3>
                 <label for="textoSuperior"></label>
-                <textarea class="input" id="txtSup" cols="22" rows="1" maxlength="100">
+                <textarea class="input" id="txtSup" cols="22" rows="1" maxlength="100">TOP TEXT
+            </textarea>
+                <div>
+                    <select title="diferentes filtros para fondo meme" name="" id="imgBackgroundFilter">
+                        <option value="unset">Ninguno</option>
+                        <option value="lighten">Aclarar</option>
+                        <option value="darken">Oscurecer</option>
+                        <option value="difference">Diferencia</option>
+                        <option value="luminosity">Luminosidad</option>
+                        <option value="multiply">Multiplcar</option>
+                    </select>
+                </div>
+            </div>
+            <div class="panels">
+                <h3 class="div-title">INFERIOR</h3>
+                <label for="textoInferior"></label>
+                <textarea class="input" id="txtInf" cols="22" rows="1" maxlength="1000">BOTTOM TEXT
             </textarea>
                 <div>
                     <input title="para sacar texto superior" id="sinTextoSuperior" type="checkbox" value="check" />
@@ -156,21 +174,57 @@
             </div>
             <div class="panels">
                 <div class="panels">
-                    <h3 class="div-title">FUENTE</h3>
-                    <select class="input" title="fuentes de diferentes letras" name="fuentes de letras" id="letras">
-                        <option value="Arial">Arial</option>
-                        <option value="Arial Black">Arial Black</option>
-                        <option value="American Typewriter">American Typewriter</option>
-                        <option value="Andale Mono">Andale Mono</option>
-                        <option selected value="Comic Sans MS">Comic Sans MS</option>
-                        <option value="Helvetica">Helvetica</option>
-                        <option value="Impact">Impact</option>
-                        <option value="Verdana">Verdana</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                    </select>
-                    <br><br>
-                    <!-- <input class="las-fuentes" type="text" id="lasFuentesUrl" placeholder="aca van alas fuentes"> -->
-                    <div title="tamaño,alineacion, fuente de texto" class="size-align-font-txt">
+                    <div class="panels">
+                        <h3 class="div-title">FUENTE</h3>
+                        <select class="input" title="fuentes de diferentes letras" name="fuentes de letras" id="letras">
+                            <option value="Arial">Arial</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="American Typewriter">American Typewriter</option>
+                            <option value="Andale Mono">Andale Mono</option>
+                            <option selected value="Comic Sans MS">Comic Sans MS</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Impact">Impact</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                        </select>
+                        <br><br>
+                        <!-- <input class="las-fuentes" type="text" id="lasFuentesUrl" placeholder="aca van alas fuentes"> -->
+                        <div title="tamaño,alineacion, fuente de texto" class="size-align-font-txt">
+                            <div>
+                                <input title="tamaño de fuente" class="inputSmall fuentes-size" type="number"
+                                    id="fuentesSizeUrl" min="10" max="50" value="40" />
+                            </div>
+                            <div title="alineacion del texto" class="align-btns">
+                                <button aria-label="alineacion izquierda" class="btn-txt-align-icon align-btns">
+                                    <i class="inputXSmall fas fa-align-left" id="alineacionIzq"></i>
+                                </button>
+                                <button aria-label="alineacion centrada" class="btn-txt-align-icon align-btns">
+                                    <i class="inputXSmall fas fa-align-center" id="alineacionCentro"></i>
+                                </button>
+                                <button aria-label="alineacion derecha" class="btn-txt-align-icon align-btns ">
+                                    <i class="inputXSmall fas fa-align-right" id="alineacionDer"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panels">
+                        <div title="color y fondo del texto" class="color-fondo">
+                            <div class="panelColor">
+                                <h3 class="title">COLOR</h3>
+                                <div class="color-blend">
+                                    <input title="color fuente" class="input-fondo-color" type="color" id="colorFuente">
+                                    <label for="codigoColorTexto" id="codColorText">#000000</label>
+                                </div>
+                            </div>
+                            <div class="panelColor">
+                                <h3 class="title">FONDO</h3>
+                                <div class="color-blend">
+                                    <input title="color fondo fuente" class="input-fondo-color" type="color"
+                                        id="fondoFuente">
+                                    <label for="codigoBackgroundColor" id="codColorBackground">#000000</label>
+                                </div>
+                            </div>
+                        </div>
                         <div>
                             <input title="tamaño de fuente" class="inputSmall fuentes-size" type="number"
                                 id="fuentesSizeUrl" min="10" max="50" value="40" />
@@ -187,52 +241,75 @@
                             </button>
                         </div>
                     </div>
-                </div>
-                <div class="panels panels-fondo-color">
-                    <div title="color y fondo del texto" class="color-fondo">
-                        <h3 class="title">COLOR</h3>
-                        <div class="color-blend">
-                            <input title="color fuente" class="input-fondo-color" type="color" id="colorFuente">
-                            <label for="codigoColorTexto" id="codColorText">#000000</label>
+                    <<<<<<< HEAD </div> <div class="panels panels-fondo-color">
+                        <div title="color y fondo del texto" class="color-fondo">
+                            <h3 class="title">COLOR</h3>
+                            <div class="color-blend">
+                                <input title="color fuente" class="input-fondo-color" type="color" id="colorFuente">
+                                <label for="codigoColorTexto" id="codColorText">#000000</label>
+                            </div>
+                            <h3 class="title">FONDO</h3>
+                            <div class="color-blend">
+                                <input title="color fondo fuente" class="input-fondo-color" type="color"
+                                    id="fondoFuente">
+                                <label for="codigoBackgroundColor" id="codColorBackground">#000000</label>
+                                =======
+                                <div class="panels">
+                                    <h3 class="div-title">CONTORNO</h3>
+                                    <!-- <div title="botones de contorno " class="btns-contorno"> -->
+                                    <button class="btns-contorno" aria-label="sin contorno"
+                                        id="btnNoneContorno">Ninguno</button>
+                                    <button class="btns-contorno" aria label="contorno claro"
+                                        id="btnLightContorno">Claro</button>
+                                    <button class="btns-contorno" aria-label="contorno oscuro"
+                                        id="btnDarkContorno">Oscuro</button>
+                                    >>>>>>> 6ddd8e854190e64831ad660d2d2bc4645f4af446
+                                </div>
+                            </div>
+                            <div>
+                                <input id="fondoTransparente" type="checkbox" value="check" />
+                                <label for="fondoTransparente">Fondo Transparente</label>
+                            </div>
+                            <<<<<<< HEAD </div> <div class="panels">
+                                <h3 class="div-title">CONTORNO</h3>
+                                <div title="botones de contorno " class="btns-contorno">
+                                    <button aria-label="sin contorno" id="btnNoneContorno">Ninguno</button>
+                                    <button aria label="contorno claro" id="btnLightContorno">Claro</button>
+                                    <button aria-label="contorno oscuro" id="btnDarkContorno">Oscuro</button>
+                                    =======
+                                    <div class="panels">
+                                        <h3 class="div-title">INTERLINEADO</h3>
+                                        <label class="input" for="interlineado"></label>
+                                        <select class="input" id="interlineado">
+                                            <option value="0.8">0.8</option>
+                                            <option value="1">1</option>
+                                            <option value="1.2">1.2</option>
+                                            <option value="1.5">1.5</option>
+                                            <option value="2">2</option>
+                                            <option value="2.5">2.5</option>
+                                        </select>
+                                        >>>>>>> 6ddd8e854190e64831ad660d2d2bc4645f4af446
+                                    </div>
+                                </div>
+                                <div class="panels">
+                                    <h3 class="div-title">ESPACIADO</h3>
+                                    <label for="espaciado"></label>
+                                    <input title="espaciar texto" class="input fuentes-size" type="number"
+                                        id="txtEspaciado" min="10" max="50" value="35" />
+                                </div>
+                                <div class="panels">
+                                    <h3 class="div-title">INTERLINEADO</h3>
+                                    <label for="interlineado"></label>
+                                    <select id="interlineado">
+                                        <option value="0.8">0.8</option>
+                                        <option value="1">1</option>
+                                        <option value="1.2">1.2</option>
+                                        <option value="1.5">1.5</option>
+                                        <option value="2">2</option>
+                                        <option value="2.5">2.5</option>
+                                    </select>
+                                </div>
                         </div>
-                        <h3 class="title">FONDO</h3>
-                        <div class="color-blend">
-                            <input title="color fondo fuente" class="input-fondo-color" type="color" id="fondoFuente">
-                            <label for="codigoBackgroundColor" id="codColorBackground">#000000</label>
-                        </div>
-                    </div>
-                    <div>
-                        <input id="fondoTransparente" type="checkbox" value="check" />
-                        <label for="fondoTransparente">Fondo Transparente</label>
-                    </div>
-                </div>
-                <div class="panels">
-                    <h3 class="div-title">CONTORNO</h3>
-                    <div title="botones de contorno " class="btns-contorno">
-                        <button aria-label="sin contorno" id="btnNoneContorno">Ninguno</button>
-                        <button aria label="contorno claro" id="btnLightContorno">Claro</button>
-                        <button aria-label="contorno oscuro" id="btnDarkContorno">Oscuro</button>
-                    </div>
-                </div>
-                <div class="panels">
-                    <h3 class="div-title">ESPACIADO</h3>
-                    <label for="espaciado"></label>
-                    <input title="espaciar texto" class="input fuentes-size" type="number" id="txtEspaciado" min="10"
-                        max="50" value="35" />
-                </div>
-                <div class="panels">
-                    <h3 class="div-title">INTERLINEADO</h3>
-                    <label for="interlineado"></label>
-                    <select id="interlineado">
-                        <option value="0.8">0.8</option>
-                        <option value="1">1</option>
-                        <option value="1.2">1.2</option>
-                        <option value="1.5">1.5</option>
-                        <option value="2">2</option>
-                        <option value="2.5">2.5</option>
-                    </select>
-                </div>
-            </div>
         </aside>
     </section>
     </div>

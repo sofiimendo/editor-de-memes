@@ -30,7 +30,7 @@
 input[type=range] {
     height: 15px;
     -webkit-appearance: none;
-    margin: 2%;
+    margin-top: 6%;
     width: 100%;
     background-color: transparent;
 }
@@ -130,12 +130,20 @@ input[type=range]::-ms-thumb {
     background-color: var(--color-header);
 }
 
+.fondo-color-shape {
+    border-radius: 4px;
+    background-color: cadetblue;
+}
+.filter {
+    margin-top: 20px;
+}
 @media (min-width: 320px) and (max-width: 700px) {
-    input[type=range]{
+    input[type=range] {
         height: 0;
         width: 380px;
     }
-    .restablecer-filtros{
+
+    .restablecer-filtros {
         padding: 0;
     }
 }
