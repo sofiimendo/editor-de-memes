@@ -25,6 +25,7 @@ body {
 }
 
 .aside {
+    overflow: auto;
     background-color: var(--color-aside);
     width: 260px;
     height: 100%;
