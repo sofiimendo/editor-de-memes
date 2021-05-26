@@ -24,7 +24,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.aside {
+aside {
     overflow: auto;
     background-color: var(--color-aside);
     width: 260px;
