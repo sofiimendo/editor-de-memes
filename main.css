@@ -1,7 +1,4 @@
-/* exportado*/
 .my-main {
-    /*flex grow es porque depende del tamaño de la imagen que se le ponga es cuano debe crecer?
-    mi DUDA es por el numero 1 que le asigne*/
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -9,7 +6,6 @@
     align-items: center;
     padding: 0.5%;
 }
-
 .editor-content {
     height: 600px;
     width: 600px;
@@ -21,7 +17,6 @@
     align-items: center;
     position:relative;
 }
-
 .top-bottom-text {
     height: 15%;
     width: 100%;
@@ -65,8 +60,6 @@
     transition: 0.3s;
 }
 
-
-
 @media (min-width: 320px) and (max-width: 700px){
     .editor-content{
         height: 300px;
@@ -74,5 +67,9 @@
     }
     .top-bottom-text {
         font-size: 20px;
+    }
+    .descarga{
+        width: 145px;
+        height: 45px;
     }
 }

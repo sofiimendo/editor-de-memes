@@ -11,6 +11,7 @@ body.dark {
     --color-aside: rgb(24, 29, 42);
     --color-background: rgb(48, 52, 63);
     --color: rgb(255, 255, 255);
+    --color-background-hover: rgb(78, 85, 101);
 }
 
 body.light {
@@ -18,6 +19,7 @@ body.light {
     --color-header: rgb(224, 224, 224);
     --color-background: rgb(238, 238, 238);
     --color: rgb(20, 20, 20);
+    --color-background-hover: rgb(189, 189, 189);
 }
 
 body {
@@ -25,8 +27,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-aside {
-    overflow: auto;
+.aside {
     background-color: var(--color-aside);
     width: 260px;
     height: 100%;
@@ -59,7 +60,7 @@ aside {
     flex-direction: column;
 }
 
-/*LA CLASE panel-aside LA USE PERO NO LA ESTILER PORQUE CREO QUE SLO LA USARE PARA HACER EL LIGHT/DARK APPEARANCE*/
+/LA CLASE panel-aside LA USE PERO NO LA ESTILER PORQUE CREO QUE SLO LA USARE PARA HACER EL LIGHT/DARK APPEARANCE/
 .input {
     background-color: var(--color-background);
     width: 230px;
@@ -69,7 +70,10 @@ aside {
     margin-bottom: 0.2px;
 }
 
-/*input[type="color"] {*/
+.input:hover {
+    background-color: var(--color-background-hover);
+}
+
 input[type="color"] {
     -webkit-appearance: none;
     border: none;
@@ -141,6 +145,10 @@ input[type="color"]::-webkit-color-swatch {
     padding: 2%;
 }
 
+.inputSmall:hover {
+    background-color: var(--color-background-hover);
+}
+
 .align-btns {
     display: flex;
     justify-content: space-between;
@@ -156,6 +164,10 @@ input[type="color"]::-webkit-color-swatch {
     margin-right: 3px;
 }
 
+.inputXSmall:hover {
+    background-color: var(--color-background-hover);
+}
+
 section {
     display: unset;
 }
@@ -168,6 +180,11 @@ section {
 @media (min-width: 320px) and (max-width: 700px) {
     section {
         display: none
+    }
+
+    input[type="color"] {
+        width: 20px;
+        height: 20px;
     }
 
     .close-aside {
@@ -191,6 +208,3 @@ section {
         width: 100%;
     }
 }
-
-
-
