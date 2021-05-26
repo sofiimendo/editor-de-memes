@@ -200,9 +200,19 @@ section {
     justify-content: space-between;
 }
 
+    
+
 @media (min-width: 320px) and (max-width: 700px) {
     .close-aside {
         display: block;
+        float: right;
+        border: none;
+        width: 20px;
+        height: 20px;
+        color: var(--color);
+        background-color: var(--color-aside);
+    }
+Fuente: https://www.iteramos.com/pregunta/58780/coloca-un-boton-alineado-a-la-derecha
     }
     .aside {
         width: 100%;
@@ -266,4 +276,3 @@ section {
 }
 
 
-}
