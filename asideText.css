@@ -35,4 +35,6 @@ flex-direction: column;
 .margins-sin-texto{
   margin-top: 2%;
 }
-
+.btns-contorno{
+  width: 105%;
+}
