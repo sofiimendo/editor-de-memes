@@ -144,11 +144,10 @@ input[type=range]::-ms-thumb {
 @media (min-width: 320px) and (max-width: 700px) {
     input[type=range] {
         height: 0;
-        width: 380px;
+        width: 300px;
     }
 
     .restablecer-filtros {
         padding: 0;
-        font-size: 13px;
     }
 }
