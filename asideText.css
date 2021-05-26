@@ -27,8 +27,12 @@ background-color: transparent;
   -webkit-text-stroke: none;
 }
 .size-align-font-txt{
-  display:flex
+  display:flex;
+  justify-content: space-between;
 }
-.panels-fondo-color{
-  width: 77%;
+.color-fondo{
+flex-direction: column;
+}
+.margins-sin-texto{
+  margin-top: 2%;
 }

@@ -134,7 +134,7 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .div-title {
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 }
 
 .close-aside {
@@ -143,23 +143,17 @@ input[type="color"]::-webkit-color-swatch {
 
 .inputSmall {
     background-color: var(--color-background);
-    color: var(--color);
-    width: 112px;
+    width: 77px;
     height: 34px;
     border: none;
     border-radius: 2px;
-    margin-bottom: 0.2px;
-    margin-right: 5px;
+    padding: 2%;
 }
 
 .align-btns {
     display: flex;
     justify-content: space-between;
-    margin-left: 3px;
-    align-items: center;
-    border: none;
-    padding-top: 2px;
-    height: 34px;
+    margin-top: 2%;
 }
 
 .inputXSmall {
