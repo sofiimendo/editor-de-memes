@@ -113,10 +113,7 @@ input[type="color"]::-webkit-color-swatch {
     align-items: center;
     padding: 5px;
     height: 40px;
-<<<<<<< HEAD
-=======
     border-radius: 4px;
->>>>>>> 6ddd8e854190e64831ad660d2d2bc4645f4af446
 }
 
 #backgroundColorImg {
@@ -133,11 +130,7 @@ input[type="color"]::-webkit-color-swatch {
     transition: 0.2s;
     padding: 5px 10px;
     margin-bottom: 5px;
-<<<<<<< HEAD
-
-=======
     border-radius: 4px;
->>>>>>> 6ddd8e854190e64831ad660d2d2bc4645f4af446
 }
 
 .div-title {
@@ -150,10 +143,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .inputSmall {
     background-color: var(--color-background);
-<<<<<<< HEAD
-=======
     color: var(--color);
->>>>>>> 6ddd8e854190e64831ad660d2d2bc4645f4af446
     width: 112px;
     height: 34px;
     border: none;
