@@ -68,7 +68,6 @@ body {
     margin-bottom: 0.2px;
 }
 
-/*input[type="color"] {*/
 input[type="color"] {
     -webkit-appearance: none;
     border: none;
@@ -168,7 +167,10 @@ section {
     section {
         display: none
     }
-
+    input[type="color"] {
+        width: 20px;
+        height: 20px;
+    }
     .close-aside {
         display: block;
     }
