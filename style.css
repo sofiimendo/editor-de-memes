@@ -25,7 +25,12 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+<<<<<<< HEAD
+aside {
+    overflow: auto;
+=======
 .aside {
+>>>>>>> c496ad89713da88dcb0e3ce5952e9c0fd758dabf
     background-color: var(--color-aside);
     width: 260px;
     height: 100%;

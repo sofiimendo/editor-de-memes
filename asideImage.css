@@ -131,7 +131,14 @@ input[type=range]::-ms-thumb {
 }
 
 @media (min-width: 320px) and (max-width: 700px) {
+<<<<<<< HEAD
+    aside {
+        width: 100%;
+    }
+    input[type=range] {
+=======
     input[type=range]{
+>>>>>>> c496ad89713da88dcb0e3ce5952e9c0fd758dabf
         height: 0;
         width: 300px;
     }
