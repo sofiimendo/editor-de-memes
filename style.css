@@ -60,14 +60,15 @@ body {
     flex-direction: column;
 }
 
-/LA CLASE panel-aside LA USE PERO NO LA ESTILER PORQUE CREO QUE SLO LA USARE PARA HACER EL LIGHT/DARK APPEARANCE/
 .input {
     background-color: var(--color-background);
-    width: 230px;
+    width: 100%;
     height: 34px;
     border: none;
     border-radius: 2px;
     margin-bottom: 0.2px;
+    padding: 3px;
+    
 }
 
 .input:hover {
@@ -77,9 +78,10 @@ body {
 input[type="color"] {
     -webkit-appearance: none;
     border: none;
-    width: 33px;
+    width: 24px;
     height: 24px;
     background-color: transparent;
+    margin-right: 9px;
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -102,6 +104,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .color-blend {
     border-radius: var(--color-background);
+    border-radius: 3px;
     background-color: var(--color-background);
     color: var(--color);
     display: flex;
@@ -109,12 +112,16 @@ input[type="color"]::-webkit-color-swatch {
     align-items: center;
     padding: 5px;
     height: 40px;
+    width: 100%;
+    margin-right: 3%;
 }
 
 #backgroundColorImg {
     margin: 5%;
 }
-
+.ninguno {
+    width: 100%;
+}
 #imgBackgroundFilter {
     color: var(--color);
     width: 100%;
@@ -122,6 +129,7 @@ input[type="color"]::-webkit-color-swatch {
     background-color: var(--color-background);
     border-radius: var(--color-background);
     border: none;
+    border-radius: 3px;
     transition: 0.2s;
     padding: 5px 10px;
     margin-bottom: 5px;
@@ -138,11 +146,16 @@ input[type="color"]::-webkit-color-swatch {
 
 .inputSmall {
     background-color: var(--color-background);
-    width: 77px;
+    color: var(--color);
+    width: 100%;
     height: 34px;
     border: none;
     border-radius: 2px;
-    padding: 2%;
+    margin: 3px;
+}
+.fuentes-size {
+    width: 100%;
+    padding-left: 7px;
 }
 
 .inputSmall:hover {
@@ -150,14 +163,15 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .align-btns {
+    width: 50%;
     display: flex;
     justify-content: space-between;
-    margin-top: 2%;
+ 
 }
 
 .inputXSmall {
     background-color: var(--color-background);
-    width: 30px;
+    width: 100%;
     height: 34px;
     border: none;
     border-radius: 2px;
@@ -176,10 +190,17 @@ section {
     display: flex;
     justify-content: space-between;
 }
+select {
+    color: var(--color);
+}
+input {
+    color: var(--color);
+}
 
 @media (min-width: 320px) and (max-width: 700px) {
     section {
-        display: none
+        display: none;
+        padding: 20px;
     }
 
     input[type="color"] {
@@ -188,16 +209,23 @@ section {
     }
 
     .close-aside {
+        font-size: 16px;
         display: block;
+        float: right;
+        color: var(--color);
+        background-color: var(--color-aside);
+        border: none;
     }
 
     .aside {
         width: 100%;
         display: none;
+    
     }
 
     .panel-aside {
         display: unset;
+        padding: 15px;
     }
 
     .panel-aside {

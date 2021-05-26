@@ -55,93 +55,95 @@
     <!-- ASIDE imagen -->
     <!-- ASIDE imagen -->
     <section class="aside img-aside panel-aside" id="panel-aside-img">
-        <aside title="aside de imagen" class="aside-img responsiveAside" id="asideImg">
-            <button aria-label="cerrar la aside de imagen" class="close-aside" id="close-aside-img"><i
-                    class="fas fa-times"></i>
-            </button>
-            <h2 class="panel-title">IMAGEN</h2>
-            <!-------- url  ----------->
-            <!-------- url  ----------->
-            <div class="panels">
-                <h3 class="div-title">URL</h3>
-                <input title="link imagen" class="input input-url" type="text" id="imgUrl" />
-            </div>
-            <!---- fondo  ---------->
-            <!---- fondo  ---------->
-            <div class="panels">
-                <h3 class="div-title">FONDO</h3>
-                <div class="fondo-color">
-                    <div class="color-blend" id="colorBlend">
-                        <input title="color fondo meme" class="input input-fondo-color" type="color" id="colorFondo"
-                            value="#FFFFFF" />
-                        <label for="backgroundColorImagen" id="backgroundColorImg">#FFFFFF</label>
-                    </div>
-                    <div>
-                        <select class="color-blend" title="diferentes filtros para fondo meme" name=""
-                            id="imgBackgroundFilter">
-                            <option value="unset">Ninguno</option>
-                            <option value="lighten">Aclarar</option>
-                            <option value="darken">Oscurecer</option>
-                            <option value="difference">Diferencia</option>
-                            <option value="luminosity">Luminosidad</option>
-                            <option value="multiply">Multiplcar</option>
-                        </select>
-                    </div>
+        <button aria-label="cerrar la aside de imagen" class="close-aside" id="close-aside-img"><i
+                class="fas fa-times"></i>
+            <aside title="aside de imagen" class="aside-img responsiveAside" id="asideImg">
+        </button>
+        <h2 class="panel-title">IMAGEN</h2>
+        <!-------- url  ----------->
+        <!-------- url  ----------->
+        <div class="panels">
+            <h3 class="div-title">URL</h3>
+            <input title="link imagen" class="input input-url" type="text" id="imgUrl" />
+        </div>
+        <!---- fondo  ---------->
+        <!---- fondo  ---------->
+        <div class="panels">
+            <h3 class="div-title">FONDO</h3>
+            <div class="fondo-color">
+                <div class="color-blend" id="colorBlend">
+                    <input title="color fondo meme" class="input input-fondo-color" type="color" id="colorFondo"
+                        value="#FFFFFF" />
+                    <label for="backgroundColorImagen" id="backgroundColorImg">#FFFFFF</label>
+                </div>
+                <div class="ninguno">
+                    <select class="color-blend" title="diferentes filtros para fondo meme" name=""
+                        id="imgBackgroundFilter">
+                        <option value="unset">Ninguno</option>
+                        <option value="lighten">Aclarar</option>
+                        <option value="darken">Oscurecer</option>
+                        <option value="difference">Diferencia</option>
+                        <option value="luminosity">Luminosidad</option>
+                        <option value="multiply">Multiplcar</option>
+                    </select>
                 </div>
             </div>
+        </div>
+        </div>
+        <!-------  filtros  ---------->
+        <!-------  filtros  ---------->
+        <div title="panel de filtros" class="panels filtros">
+            <h3 class="div-title">FILTROS</h3>
+            <div class="input-range-filters">
+                <label for="brillo">BRILLO</label>
+                <input type="range" id="brightness" class="filter" data-property="brightness" min="0" max="1" step="0.1"
+                    value="1" />
             </div>
-            <!-------  filtros  ---------->
-            <!-------  filtros  ---------->
-            <div title="panel de filtros" class="panels filtros">
-                <h3 class="div-title">FILTROS</h3>
-                <div class="input-range-filters">
-                    <label for="brillo">BRILLO</label>
-                    <input type="range" id="brightness" class="filter" data-property="brightness" min="0" max="1"
-                        step="0.1" value="1" />
-                </div>
-                <div class="input-range-filters">
-                    <label for="opacidad">OPACIDAD</label>
-                    <input type="range" id="opacity" class="filter" data-property="opacity" min="0" max="1" step="0.1"
-                        value="1" />
-                </div>
-                <div class="input-range-filters">
-                    <label for="contraste">CONTRASTE</label>
-                    <input type="range" id="contrast" class="filter" data-property="contrasts" min="100" max="1000"
-                        step="1" value="100" />
-                </div>
-                <div class="input-range-filters">
-                    <label for="contraste">DESENFOQUE</label>
-                    <input type="range" id="blur" class="filter" data-property="blur" min="0" max="10" step="0.1"
-                        value="0" />
-                </div>
-                <div class="input-range-filters">
-                    <label for="escalaDeGrises">ESCALA DE GRISES</label>
-                    <input type="range" id="grayScale" class="filter" data-property="grayScale min=" 0" max="100"
-                        step="1" value="0">
-                </div>
-                <div class="input-range-filters">
-                    <label for="sepia">SEPIA</label>
-                    <input type="range" id="sepia" class="filter" data-property="sepia" min="0" max="100" step="1"
-                        value="0" />
-                </div>
-                <div class="input-range-filters">
-                    <label for="">HUE</label>
-                    <input type="range" id="hueRotation" class="filter" data-property="hue" min="0" max="359" step="1"
-                        value="0" />
-                </div>
-                <div class="input-range-filters">
-                    <label for="saturado">SATURADO</label>
-                    <input type="range" id="saturate" class="filter" data-property="saturation" min="100" max="1000"
-                        step="10" value="100" />
-                </div>
-                <div class="input-range-filters">
-                    <label for="negativo">NEGATIVO</label>
-                    <input type="range" id="invert" class="filter" data-property="negative" min="0" max="1" step="0.1"
-                        value="0" />
-                </div>
-                <button title="boton para resetear los filtros" class="restablecer-filtros" id="btnReset">Reestablecer
+            <div class="input-range-filters">
+                <label for="opacidad">OPACIDAD</label>
+                <input type="range" id="opacity" class="filter" data-property="opacity" min="0" max="1" step="0.1"
+                    value="1" />
+            </div>
+            <div class="input-range-filters">
+                <label for="contraste">CONTRASTE</label>
+                <input type="range" id="contrast" class="filter" data-property="contrasts" min="100" max="1000" step="1"
+                    value="100" />
+            </div>
+            <div class="input-range-filters">
+                <label for="contraste">DESENFOQUE</label>
+                <input type="range" id="blur" class="filter" data-property="blur" min="0" max="10" step="0.1"
+                    value="0" />
+            </div>
+            <div class="input-range-filters">
+                <label for="escalaDeGrises">ESCALA DE GRISES</label>
+                <input type="range" id="grayScale" class="filter" data-property="grayScale min=" 0" max="100" step="1"
+                    value="0">
+            </div>
+            <div class="input-range-filters">
+                <label for="sepia">SEPIA</label>
+                <input type="range" id="sepia" class="filter" data-property="sepia" min="0" max="100" step="1"
+                    value="0" />
+            </div>
+            <div class="input-range-filters">
+                <label for="">HUE</label>
+                <input type="range" id="hueRotation" class="filter" data-property="hue" min="0" max="359" step="1"
+                    value="0" />
+            </div>
+            <div class="input-range-filters">
+                <label for="saturado">SATURADO</label>
+                <input type="range" id="saturate" class="filter" data-property="saturation" min="100" max="1000"
+                    step="10" value="100" />
+            </div>
+            <div class="input-range-filters">
+                <label for="negativo">NEGATIVO</label>
+                <input type="range" id="invert" class="filter" data-property="negative" min="0" max="1" step="0.1"
+                    value="0" />
+            </div>
+            <div class="container-reestablecer-filtro">
+                <button title="boton para resetear los filtros" class="reestablecer-filtros" id="btnReset">Reestablecer
                     filtros</button>
             </div>
+        </div>
         </aside>
     </section>
     <!-- ASIDE txt -->
@@ -149,15 +151,14 @@
     <!-- ASIDE txt -->
     <!-- ASIDE txt -->
     <section class="aside txt-aside panel-aside" id="panel-aside-txt">
+        <button aria-label="cerrar aside de texto" class="close-aside" id="close-aside-txt"><i class="fas fa-times"></i>
+        </button>
         <aside title="aside de texto" class="aside-txt responsiveAside" id="asideTxt">
-            <button aria-label="cerrar aside de texto" class="close-aside" id="close-aside-txt"><i
-                    class="fas fa-times"></i>
-            </button>
             <h2 class="panel-title">TEXTO</h2>
             <div class="panels">
                 <h3 class="div-title">SUPERIOR</h3>
                 <label for="textoSuperior"></label>
-                <textarea class="input" id="txtSup" cols="22" rows="1" maxlength="100">TOP TEXT
+                <textarea class="input" id="txtSup">TOP TEXT
             </textarea>
                 <div class="margins-sin-texto">
                     <input title="para sacar texto superior" id="sinTextoSuperior" type="checkbox" value="check" />
@@ -167,7 +168,7 @@
             <div class="panels">
                 <h3 class="div-title">INFERIOR</h3>
                 <label for="textoInferior"></label>
-                <textarea class="input" id="txtInf" cols="22" rows="1" maxlength="1000">BOTTOM TEXT
+                <textarea class="input" id="txtInf">BOTTOM TEXT
             </textarea>
                 <div class="margins-sin-texto">
                     <input title="sacar texto inferior" id="sinTextoInferior" type="checkbox" value="check" />
@@ -190,7 +191,7 @@
                     </select>
                     <!-- <input class="las-fuentes" type="text" id="lasFuentesUrl" placeholder="aca van alas fuentes"> -->
                     <div title="tamaño,alineacion, fuente de texto" class="size-align-font-txt">
-                        <div class="margins-sin-texto">
+                        <div class="font-size">
                             <input title="tamaño de fuente" class="inputSmall fuentes-size" type="number"
                                 id="fuentesSizeUrl" min="10" max="50" value="40" />
                         </div>
@@ -201,7 +202,7 @@
                             <button aria-label="alineacion centrada" class="btn-txt-align-icon inputXSmall">
                                 <i class="fas fa-align-center" id="alineacionCentro"></i>
                             </button>
-                            <button aria-label="alineacion derecha" class="btn-txt-align-icon inputXSmall">
+                            <button aria-label="alineaciode-color-fondon derecha" class="btn-txt-align-icon inputXSmall">
                                 <i class="fas fa-align-right" id="alineacionDer"></i>
                             </button>
                         </div>
@@ -209,30 +210,38 @@
                 </div>
                 <div class="panels">
                     <div title="color y fondo del texto" class="color-fondo">
-                        <h3 class="title">COLOR</h3>
-                        <div class="color-blend">
-                            <input title="color fuente" class="input-fondo-color" type="color" id="colorFuente">
-                            <label for="codigoColorTexto" id="codColorText">#000000</label>
-                        </div class="margins-sin-texto">
-                        <h3 class="title">FONDO</h3>
-                        <div class="color-blend">
-                            <input title="color fondo fuente" class="input-fondo-color" type="color" id="fondoFuente">
-                            <label for="codigoBackgroundColor" id="codColorBackground">#000000</label>
+                        <div class="contenedor-color-fondo">
+                            <div class="de-color-fondo">
+                                <h3 class="title">COLOR</h3>
+                                <div class="color-blend">
+                                    <input title="color fuente" class="input-fondo-color" type="color" id="colorFuente">
+                                    <label for="codigoColorTexto" id="codColorText">#000000</label>
+                                </div class="margins-sin-texto">
+                            </div>
+                            <div class="de-color-fondo">
+                                <h3 class="title">FONDO</h3>
+                                <div class="color-blend">
+                                    <input title="color fondo fuente" class="input-fondo-color" type="color"
+                                        id="fondoFuente">
+                                    <label for="codigoBackgroundColor" id="codColorBackground">#000000</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margins-sin-texto">
+                            <input id="fondoTransparente" type="checkbox" value="check" />
+                            <label for="fondoTransparente">Fondo Transparente</label>
                         </div>
                     </div>
-                    <div class="margins-sin-texto">
-                        <input id="fondoTransparente" type="checkbox" value="check" />
-                        <label for="fondoTransparente">Fondo Transparente</label>
-                    </div>
                 </div>
-                <div class="panels">
-                    <h3 class="div-title">CONTORNO</h3>
-                    <div title="botones de contorno " class="btns-contorno">
-                        <button aria-label="sin contorno" class="inputSmall" id="btnNoneContorno">Ninguno</button>
-                        <button aria label="contorno claro" class="inputSmall" id="btnLightContorno">Claro</button>
-                        <button aria-label="contorno oscuro" class="inputSmall" id="btnDarkContorno">Oscuro</button>
-                    </div>
+            </div>
+            <div class="panels">
+                <h3 class="div-title">CONTORNO</h3>
+                <div title="botones de contorno " class="btns-contorno">
+                    <button aria-label="sin contorno" class="inputSmall" id="btnNoneContorno">Ninguno</button>
+                    <button aria label="contorno claro" class="inputSmall" id="btnLightContorno">Claro</button>
+                    <button aria-label="contorno oscuro" class="inputSmall" id="btnDarkContorno">Oscuro</button>
                 </div>
+            </div>
             <div class="panels">
                 <h3 class="div-title">ESPACIADO</h3>
                 <label for="espaciado"></label>
