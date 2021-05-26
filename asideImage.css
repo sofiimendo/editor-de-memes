@@ -2,11 +2,6 @@
     right: 0;
 }
 
-.div-fondo-color {
-    display: flex;
-    flex-direction: column;
-}
-
 .img-meme {
     height: 100%;
     width: 100%;
